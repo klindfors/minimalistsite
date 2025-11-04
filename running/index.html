@@ -48,7 +48,7 @@ async function loadRuns() {
   const runs = await res.json();
   const container = document.getElementById('runs');
   container.innerHTML = runs.slice(0,5)
-    .map(run => `<p>${run.name} — ${(run.distance/1000).toFixed(2)} km</p>`)
+    .map(run => `<p>${run.name} - ${(run.distance/1000).toFixed(2)} km</p>`)
     .join('');
 }
 loadRuns();
