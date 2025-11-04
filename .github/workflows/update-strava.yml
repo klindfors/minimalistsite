@@ -2,42 +2,36 @@ name: Update Strava Data
 
 on:
   schedule:
-    - cron: '0 3 * * *' # run every day at 03:00 UTC
-  workflow_dispatch:    # allows manual
+    - cron: '0 3 * * *'  # Runs every day at 03:00 UTC
+  workflow_dispatch:      # Allows manual run
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-
+   
       - uses: actions/checkout@v3
-
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-
       - run: npm install node-fetch
 
-      # ensure runs.json exists
-      - run: |
-          mkdir -p running 
-          touch running/runs.json
-
-    
       - name: Fetch Strava Data
-        run: node fetchStrava.js
+        run: |
+          mkdir -p running
+          touch running/runs.json
+          node fetchStrava.js
         env:
           STRAVA_TOKEN: ${{ secrets.STRAVA_TOKEN }}
 
-
       - name: Commit & Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           git add running/runs.json
           git diff --cached --quiet || git commit -m "Automated update of Strava data"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
