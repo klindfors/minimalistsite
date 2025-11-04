@@ -34,4 +34,11 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add running/runs.json
           git diff --cached --quiet || git commit -m "Automated update of Strava data"
-          git push 
+      - name: Test Git Push
+        run: 
+           git config --global user.name "github-actions"
+           git config --global user.email "github-actions@github.com"
+            git status
+            git add running/runs.json
+            git commit -m "Test commit" || echo "No changes"
+            git push
