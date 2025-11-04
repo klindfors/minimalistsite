@@ -39,7 +39,7 @@
 
 <script>
 async function loadRuns() {
-  const res = await fetch('runs.json');
+  const res = await fetch('../runs.json');
   const runs = await res.json();
   const container = document.getElementById('runs');
   container.innerHTML = runs.slice(0,5)
