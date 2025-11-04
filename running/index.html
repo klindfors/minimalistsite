@@ -21,7 +21,7 @@
     h1 {
         font-size: 4em;
         color: #1c1212;
-        margin-bottom: 1px;
+        margin-bottom: 0px;
         margin-top: 20px;
         font-family: 'Square Peg', cursive; 
         font-display: swap;
@@ -41,11 +41,18 @@
         margin-top: 200px;
         font-family: 'Square Peg'; 
     }
+     p3 {
+        font-size: 1.2em;
+        color: #1c1212;
+        margin: 0px 5px;
+        margin-top: 0 px;
+        font-family: 'Square Peg'; 
+    }
 </style>
 </head>
 <body>
 <h1>Lil run log</h1>
-<p1>(all data from my strava)</p1>
+<p3>(all data from my <a href="https://www.strava.com/athletes/114519096">Strava</a>)</p3>
 <div id="runs"></div>
 
 <script>
@@ -74,7 +81,7 @@ container.innerHTML = runs.slice(1, 10)
       return `
         <div class="run">
           <div class="run-name"> <p1>${run.name}</p1></div>
-          <div class="run-details"><p2>${dateStr} • ${location} • ${km} km  • ${hr} bpm </p2> </div>
+          <div class="run-details"><p2>${dateStr} • ${location} • ${km} km  ❤ ${hr} bpm </p2> </div>
       `;
     })
     .join('');
