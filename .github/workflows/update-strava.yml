@@ -33,7 +33,7 @@ jobs:
         env:
           STRAVA_TOKEN: ${{ secrets.STRAVA_TOKEN }}
 
-y
+
       - name: Commit & Push
         run: |
           git config --global user.name "github-actions[bot]"
