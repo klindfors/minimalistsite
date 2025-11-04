@@ -2,43 +2,38 @@ name: Update Strava Data
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # Runs every day at 03:00 UTC
-  workflow_dispatch:      # Allows manual run
+    - cron: "0 5 * * *"  
+  workflow_dispatch:  # allow manual runs
 
 jobs:
-  update:
+  update-strava:
     runs-on: ubuntu-latest
 
     steps:
-   
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+      - name: Get short-lived access token
+        id: get_token
+        run: |
+          response=$(curl -s -X POST https://www.strava.com/api/v3/oauth/token \
+            -d client_id=${{ secrets.STRAVA_CLIENT_ID }} \
+            -d client_secret=${{ secrets.STRAVA_CLIENT_SECRET }} \
+            -d grant_type=refresh_token \
+            -d refresh_token=${{ secrets.STRAVA_REFRESH_TOKEN }})
+          echo "token=$(echo $response | jq -r .access_token)" >> $GITHUB_OUTPUT
 
-      - run: npm install node-fetch
-
-      - name: Fetch Strava Data
+      - name: Fetch latest activity
         run: |
           mkdir -p running
-          touch running/runs.json
-          node fetchStrava.js
-        env:
-          STRAVA_TOKEN: ${{ secrets.STRAVA_TOKEN }}
+          curl -s -G "https://www.strava.com/api/v3/athlete/activities" \
+            -H "Authorization: Bearer ${{ steps.get_token.outputs.token }}" \
+            -d per_page=1 > running/latest.json
 
-      - name: Commit & Push
+      - name: Commit and push if changed
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add running/runs.json
-          git diff --cached --quiet || git commit -m "Automated update of Strava data"
-      - name: Test Git Push
-        run: 
-           git config --global user.name "github-actions"
-           git config --global user.email "github-actions@github.com"
-            git status
-            git add running/runs.json
-            git commit -m "Test commit" || echo "No changes"
-            git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add running/latest.json
+          git diff --cached --quiet || git commit -m "Daily Strava update"
+          git push
