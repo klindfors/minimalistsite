@@ -34,4 +34,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add running/runs.json
           git diff --cached --quiet || git commit -m "Automated update of Strava data"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          git push 
