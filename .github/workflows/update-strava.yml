@@ -3,7 +3,10 @@ name: Update Strava Data
 on:
   schedule:
     - cron: "0 5 * * *"  
-  workflow_dispatch:  # allow manual runs
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-strava:
@@ -23,17 +26,18 @@ jobs:
             -d refresh_token=${{ secrets.STRAVA_REFRESH_TOKEN }})
           echo "token=$(echo $response | jq -r .access_token)" >> $GITHUB_OUTPUT
 
-      - name: Fetch latest activity
+      - name: Fetch latest activities
         run: |
-          mkdir -p running
           curl -s -G "https://www.strava.com/api/v3/athlete/activities" \
             -H "Authorization: Bearer ${{ steps.get_token.outputs.token }}" \
-            -d per_page=1 > running/latest.json
+            -d per_page=30 > runs.json
+          echo "File created, contents:"
+          cat runs.json
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add running/runs.json
+          git add runs.json
           git diff --cached --quiet || git commit -m "Daily Strava update"
           git push
