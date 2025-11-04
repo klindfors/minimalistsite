@@ -1,1 +1,1 @@
-{"message":"Authorization Error","errors":[{"resource":"Athlete","field":"access_token","code":"invalid"}]}
+{"message":"Authorization Error","errors":[{"resource":"AccessToken","field":"activity:read_permission","code":"missing"}]}
