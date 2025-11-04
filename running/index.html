@@ -17,24 +17,35 @@
         min-height: 100vh;
     }
 
+
     h1 {
         font-size: 4em;
         color: #1c1212;
-        margin-bottom: 30px;
+        margin-bottom: 1px;
         margin-top: 20px;
         font-family: 'Square Peg', cursive; 
         font-display: swap;
     }
-    
-    #runs p {
-        font-size: 1.2em;
+     p2 {
+        font-size: 0.8em;
         color: #1c1212;
-        margin: 10px 0;
+        margin-bottom: 3px;
+        margin-top: 20px;
+        font-display: swap;
+    }
+    
+    #runs p1 {
+        font-size: 2.2em;
+        color: #1c1212;
+        margin: 10px 200;
+        margin-top: 200px;
+        font-family: 'Square Peg'; 
     }
 </style>
 </head>
 <body>
 <h1>Lil run log</h1>
+<p1>(all data from my strava)</p1>
 <div id="runs"></div>
 
 <script>
@@ -42,8 +53,30 @@ async function loadRuns() {
   const res = await fetch('../runs.json');
   const runs = await res.json();
   const container = document.getElementById('runs');
-  container.innerHTML = runs.slice(0,5)
-    .map(run => `<p>${run.name} - ${(run.distance/1000).toFixed(2)} km</p>`)
+container.innerHTML = runs.slice(1, 10)
+    .map(run => {
+      // Formatera datum
+      const date = new Date(run.start_date_local);
+      const dateStr = date.toLocaleDateString('sv-SE', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+      
+      //hämta plats (om den finns)
+      const location = run.location_city || run.location_state || run.location_country || 'Sydney';
+      
+      // Formatera distans
+      const km = (run.distance / 1000).toFixed(2);
+
+      const hr = (run.average_heartrate);
+      
+      return `
+        <div class="run">
+          <div class="run-name"> <p1>${run.name}</p1></div>
+          <div class="run-details"><p2>${dateStr} • ${location} • ${km} km  • ${hr} bpm </p2> </div>
+      `;
+    })
     .join('');
 }
 loadRuns();
