@@ -10,21 +10,22 @@
 
 <style>
   body {
-    background-color: #fff0ea;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-  }
+  background-color: #fff0ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(10px, 4vw, 20px);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
 
 h1 {
   font-size: clamp(2.4em, 6vw, 4em);
+  line-height: clamp(1.1, 2vw, 1.2);
   color: #1c1212;
-  margin-top: 20px;
-  margin-bottom: 0px;
+  margin-top: clamp(10px, 3vw, 20px);
+  margin-bottom: 0;
   font-family: 'Square Peg', cursive;
 }
 
@@ -40,14 +41,13 @@ h1 {
     margin-bottom: 40px;
     font-family: 'Caveat', cursive;
     text-align: center;
-    margin-top: 0.4px;
-    margin-bottom: 0px;
+    margin-top: clamp(0px, 1vw, 4px);
+    margin-bottom: clamp(0px, 2vw, 40px);
   }
 
   #runs {
     display: flex;
     flex-direction: column;
-    
     background-color: #faf6f0;
     background-image: repeating-linear-gradient(
       transparent,
