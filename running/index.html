@@ -28,6 +28,12 @@
     font-family: 'Square Peg', cursive;
   }
 
+  @media (max-width: 500px) {
+  h1 {
+    font-size: 2.4em;
+  }
+}
+
   .description {
     font-size: 0.9em;
     color: #1c1212;
@@ -53,7 +59,7 @@
     padding: 40px 50px;
     margin: 30px auto;
     max-width: 600px;
-    width: 50%;
+    width: 90%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
   }
@@ -67,6 +73,16 @@
     width: 2px;
     background-color: #e8a5a5;
   }
+
+  @media (max-width: 500px) {
+  #runs::before {
+    left: 15px; /* linjen ej messed up på mobil */
+  }
+
+  #runs {
+    padding-left: 30px; 
+  }
+}
 
   .run {
     display: flex;
