@@ -69,6 +69,8 @@ h1 {
     position: relative;
 }
 
+
+
   #runs::before {
     content: '';
     position: absolute;
@@ -89,6 +91,7 @@ h1 {
     padding-left: 30px; 
   }
 
+  
 
   .run {
   display: flex;
@@ -117,12 +120,10 @@ h1 {
     padding-bottom: 50px; 
 }
 
-  @media (max-width: 400px) {
-    #runs {
-      padding: 30px 25px;
-      width: 95%;
-      margin-left: 15px ;
-    }
+  @media (max-width: 500px) {
+  #runs {
+    transform: scale(0.88);      
+    transform-origin: top left;  
   }
 </style>
 </head>
