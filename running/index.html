@@ -56,10 +56,10 @@ h1 {
     background-color: #faf6f0;
     background-image: repeating-linear-gradient(
         transparent,
-        transparent clamp(32px, 8vw, 39px),
+        transparent calc(var(--line) - 1px),
         #e8d5c4 1px,
-        #e8d5c4 clamp(33px, 8.2vw, 40px)
-        );
+        #e8d5c4 var(--line)
+    );
     border-radius: 5px;
     padding: clamp(25px, 7vw, 40px) clamp(20px, 8vw, 50px);
     margin: clamp(15px, 12vw, 20px) auto;
@@ -98,17 +98,20 @@ h1 {
 }
 
   .run-title {
-  line-height: var(--line);
-  font-size: clamp(1.6em, 5vw, 2.2em);
-  margin: 0;
+  line-height: var(--line*0.8);
+  font-size: clamp(1.6em, 1vw, 2.2em);
+  margin-top: clamp(0.9em, 1vw, 2.0em);
+  margin-bottom: 0px;
   font-family: 'Square Peg', cursive;
+  padding-bottom: 0px; 
 }
   
   .run-details {
-    line-height: var(--line);
+    line-height: var(--line*1.2);
     font-size: clamp(0.9rem, 1.7vw, 1.1rem);
-    margin: 0;
     font-family: 'Caveat', cursive;
+    margin: 0;    
+    padding-bottom: 30px; 
 }
 
   @media (max-width: 400px) {
