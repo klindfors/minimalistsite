@@ -50,24 +50,24 @@ h1 {
     flex-direction: column;
     background-color: #faf6f0;
     background-image: repeating-linear-gradient(
-      transparent,
-      transparent 39px,
-      #e8d5c4 1px,
-      #e8d5c4 40px
-    );
+        transparent,
+        transparent clamp(32px, 8vw, 39px),
+        #e8d5c4 1px,
+        #e8d5c4 clamp(33px, 8.2vw, 40px)
+        );
     border-radius: 5px;
-    padding: 40px 50px;
-    margin: 30px auto;
+    padding: clamp(25px, 6vw, 40px) clamp(20px, 8vw, 50px);
+    margin: clamp(15px, 6vw, 30px) auto;
     max-width: 600px;
     width: 90%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
-  }
+}
 
   #runs::before {
     content: '';
     position: absolute;
-    left: 30px;
+    left: clamp(18px, 6vw, 30px);
     top: 0;
     bottom: 0;
     width: 2px;
@@ -86,11 +86,11 @@ h1 {
 
   .run {
     display: flex;
-    min-height: 40px;
+    min-height: clamp(32px, 7vw, 40px);
     flex-direction: column;
     justify-content: center;
-    gap: 7px;
-    padding-bottom: 11px;
+    gap: clamp(32px, 7v, 40px);
+    padding-bottom: clamp(6px, 2vw, 11px);
     
   }
 
