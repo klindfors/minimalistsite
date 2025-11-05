@@ -51,8 +51,8 @@
 </style>
 </head>
 <body>
-<h1>Lil run log</h1>
-<p3>(all data from my <a href="https://www.strava.com/athletes/114519096">Strava</a>)</p3>
+<h1>Lil activity log</h1>
+<p3>(All data from my <a href="https://www.strava.com/athletes/114519096">Strava</a>, exported to JSON, synced via GitHub workflow)</p3>
 <div id="runs"></div>
 
 <script>
@@ -81,7 +81,7 @@ container.innerHTML = runs.slice(1, 10)
       return `
         <div class="run">
           <div class="run-name"> <p1>${run.name}</p1></div>
-          <div class="run-details"><p2>${dateStr} • ${location} • ${km} km  ❤ ${hr} bpm </p2> </div>
+          <div class="run-details"><p2>${dateStr} • ${location} • ${km} km  ❤ ${hr} bpm </p2><br></br> </div>
       `;
     })
     .join('');
