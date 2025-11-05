@@ -20,13 +20,13 @@
     min-height: 100vh;
   }
 
-  h1 {
-    font-size: 4em;
-    color: #1c1212;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-family: 'Square Peg', cursive;
-  }
+h1 {
+  font-size: clamp(2.4em, 6vw, 4em);
+  color: #1c1212;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-family: 'Square Peg', cursive;
+}
 
   @media (max-width: 500px) {
   h1 {
@@ -35,7 +35,7 @@
 }
 
   .description {
-    font-size: 0.9em;
+    font-size: clamp(0,8em, 1.8vw,0.9em);
     color: #1c1212;
     margin-bottom: 40px;
     font-family: 'Caveat', cursive;
@@ -95,7 +95,7 @@
   }
 
   .run-title {
-    font-size: 2.2em;
+    font-size: clamp(1.6em, 5vw, 2.2em);
     line-height: 1.2;
     font-family: 'Square Peg', cursive;
     color: #1c1212;
@@ -104,7 +104,7 @@
   }
 
   .run-details {
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 1.8vw, 0.9em);
     line-height: 1.4;
     font-family: 'Caveat', cursive;
     color: #1c1212;
