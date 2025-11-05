@@ -9,6 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Caveat&family=Amatic+SC&display=swap" rel="stylesheet">
 
 <style>
+
+:root {
+  --line: clamp(34px, 7vw, 42px);
+}
+
   body {
   background-color: #fff0ea;
   display: flex;
@@ -56,8 +61,8 @@ h1 {
         #e8d5c4 clamp(33px, 8.2vw, 40px)
         );
     border-radius: 5px;
-    padding: clamp(25px, 6vw, 40px) clamp(20px, 8vw, 50px);
-    margin: clamp(15px, 6vw, 30px) auto;
+    padding: clamp(25px, 7vw, 40px) clamp(20px, 8vw, 50px);
+    margin: clamp(15px, 12vw, 20px) auto;
     max-width: 600px;
     width: 90%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -65,19 +70,20 @@ h1 {
 }
 
   #runs::before {
-    content: '';
-    position: absolute;
-    left: clamp(18px, 6vw, 30px);
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #e8a5a5;
-  }
+  content: '';
+  position: absolute;
+  left: calc(var(--line) * 0.6); /* justera 0.6 efter smak */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e8a5a5;
+}
 
   @media (max-width: 500px) {
-  #runs::before {
-    left: 18px; /* linjen ej messed up på mobil */
+   #runs::before {
+     left: calc(var(--line) * 0.5);
   }
+}
 
   #runs {
     padding-left: 30px; 
@@ -85,35 +91,27 @@ h1 {
 }
 
   .run {
-    display: flex;
-    min-height: clamp(32px, 7vw, 40px);
-    flex-direction: column;
-    justify-content: center;
-    gap: clamp(32px, 7vw, 40px);
-    padding-bottom: clamp(6px, 2vw, 11px);
-    align-items: flex-start;
-    
-  }
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--line) * 2);
+  justify-content: center;
+}
 
   .run-title {
-    font-size: clamp(1.6em, 5vw, 2.2em);
-    line-height: clamp(1.1, 1,4vw, 1.35);
-    font-family: 'Square Peg', cursive;
-    color: #1c1212;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
+  line-height: var(--line);
+  font-size: clamp(1.6em, 5vw, 2.2em);
+  margin: 0;
+  font-family: 'Square Peg', cursive;
+}
+  
   .run-details {
-    font-size: clamp(0.8em, 1.8vw, 0.9em);
-    line-height: clamp(1.1, 1.4vw, 1.35);
+    line-height: var(--line);
+    font-size: clamp(0.9rem, 1.7vw, 1.1rem);
+    margin: 0;
     font-family: 'Caveat', cursive;
-    color: #1c1212;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+}
 
-  @media (max-width: 300px) {
+  @media (max-width: 400px) {
     #runs {
       padding: 30px 25px;
       width: 95%;
