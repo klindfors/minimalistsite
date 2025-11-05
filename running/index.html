@@ -2,91 +2,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Runs</title>
+<title>Lil activity log</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Caveat&family=Amatic+SC&display=swap" rel="stylesheet">
+
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
-    
-    body {
-        background-color: #fff0ea;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        margin: 0;
-        font-family: Arial, sans-serif; 
-        min-height: 100vh;
-    }
+  body {
+    background-color: #fff0ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+  }
 
+  h1 {
+    font-size: 4em;
+    color: #1c1212;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Square Peg', cursive;
+  }
 
-    h1 {
-        font-size: 4em;
-        color: #1c1212;
-        margin-bottom: 0px;
-        margin-top: 20px;
-        font-family: 'Square Peg', cursive; 
-        font-display: swap;
-    }
-     p2 {
-        font-size: 0.8em;
-        color: #1c1212;
-        margin-bottom: 3px;
-        margin-top: 20px;
-        font-display: swap;
-    }
+  .description {
+    font-size: 0.9em;
+    color: #1c1212;
+    margin-bottom: 40px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    margin-top: 0.4px;
+    margin-bottom: 0px;
+  }
+
+  #runs {
+    display: flex;
+    flex-direction: column;
     
-    #runs p1 {
-        font-size: 2.2em;
-        color: #1c1212;
-        margin: 10px 200;
-        margin-top: 200px;
-        font-family: 'Square Peg'; 
+    background-color: #faf6f0;
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 39px,
+      #e8d5c4 1px,
+      #e8d5c4 40px
+    );
+    border-radius: 5px;
+    padding: 40px 50px;
+    margin: 30px auto;
+    max-width: 600px;
+    width: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+
+  #runs::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e8a5a5;
+  }
+
+  .run {
+    display: flex;
+    min-height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding-bottom: 11px;
+    
+  }
+
+  .run-title {
+    font-size: 2.2em;
+    line-height: 1.2;
+    font-family: 'Square Peg', cursive;
+    color: #1c1212;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .run-details {
+    font-size: 0.9em;
+    line-height: 1.4;
+    font-family: 'Caveat', cursive;
+    color: #1c1212;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: 400px) {
+    #runs {
+      padding: 30px 20px;
+      width: 95%;
     }
-     p3 {
-        font-size: 1em;
-        color: #1c1212;
-        margin: 0px 5px;
-        margin-top: 0 px;
-        font-family: 'Square Peg'; 
-    }
+  }
 </style>
 </head>
+
 <body>
-<h1>Lil activity log</h1>
-<p3>(All data from my <a href="https://www.strava.com/athletes/114519096">Strava</a>, synced daily via API to JSON by GitHub workflow!)</p3>
-<div id="runs"></div>
+  <h1>Lil activity log</h1>
+  <p class="description">
+    (All data from my
+    <a href="https://www.strava.com/athletes/114519096">Strava</a>,
+    synced daily via API to JSON by GitHub workflow!)
+  </p>
 
-<script>
-async function loadRuns() {
-  const res = await fetch('../runs.json');
-  const runs = await res.json();
-  const container = document.getElementById('runs');
-container.innerHTML = runs.slice(0, 10)
-    .map(run => {
-      // Formatera datum
-      const date = new Date(run.start_date_local);
-      const dateStr = date.toLocaleDateString('sv-SE', { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
-      });
-      
-      //hämta plats (om den finns)
-      const location = run.location_city || run.location_state || run.location_country || 'Sydney';
-      
-      // Formatera distans
-      const km = (run.distance / 1000).toFixed(2);
+  <div id="runs"></div>
 
-      const hr = (run.average_heartrate);
-      
-      return `
-        <div class="run">
-          <div class="run-name"> <p1>${run.name}</p1></div>
-          <div class="run-details"><p2>${dateStr} • ${location} • ${km} km  ❤ ${hr} bpm </p2><br></br> </div>
-      `;
-    })
-    .join('');
-}
-loadRuns();
-</script>
+  <script>
+    async function loadRuns() {
+      const res = await fetch('../runs.json');
+      const runs = await res.json();
+      const container = document.getElementById('runs');
+
+      container.innerHTML = runs.slice(0, 10)
+        .map(run => {
+          const date = new Date(run.start_date_local);
+          const dateStr = date.toLocaleDateString('sv-SE', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+
+          const location = run.location_city || run.location_state || run.location_country || 'Sydney';
+          const km = (run.distance / 1000).toFixed(2);
+          const hr = run.average_heartrate || '--';
+
+          return `
+            <div class="run">
+              <p class="run-title">${run.name}</p>
+              <p class="run-details">${dateStr} • ${location} • ${km} km ❤ ${hr} bpm</p>
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    loadRuns();
+  </script>
 </body>
 </html>
