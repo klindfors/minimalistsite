@@ -42,7 +42,7 @@
         font-family: 'Square Peg'; 
     }
      p3 {
-        font-size: 1.2em;
+        font-size: 1em;
         color: #1c1212;
         margin: 0px 5px;
         margin-top: 0 px;
@@ -52,7 +52,7 @@
 </head>
 <body>
 <h1>Lil activity log</h1>
-<p3>(All data from my <a href="https://www.strava.com/athletes/114519096">Strava</a>, exported to JSON, synced via GitHub workflow)</p3>
+<p3>(All data from my <a href="https://www.strava.com/athletes/114519096">Strava</a>, synced daily via API to JSON by GitHub workflow!)</p3>
 <div id="runs"></div>
 
 <script>
@@ -60,7 +60,7 @@ async function loadRuns() {
   const res = await fetch('../runs.json');
   const runs = await res.json();
   const container = document.getElementById('runs');
-container.innerHTML = runs.slice(1, 10)
+container.innerHTML = runs.slice(0, 10)
     .map(run => {
       // Formatera datum
       const date = new Date(run.start_date_local);
