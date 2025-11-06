@@ -207,7 +207,8 @@ h1 {
   <div class="postit" id="postit">
     <h1>November!</h1>
     <p>- Kept at in sunny, rainy, cloudy weather. <br>- Kept moving in morning, lunch, evening, night.</p>
-</div>
+  </div>
+  </body>
 
   <script>
     async function loadRuns() {
@@ -237,15 +238,12 @@ h1 {
           `;
         })
 
-        
         .join('');
 
-        
+  
     }
 
     loadRuns();
-
-
     const postit = document.getElementById('postit');
 let isDragging = false;
 let offsetX, offsetY;
