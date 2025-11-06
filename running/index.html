@@ -69,6 +69,7 @@ h1 {
     width: 90%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
+    overflow: visible !important;
 }
 
 
@@ -128,6 +129,8 @@ h1 {
   }
 }
 
+
+
    .stravalogo {
                   width: clamp(200px, 15vw, 350px); /* scale the pic */    
                 
@@ -148,7 +151,47 @@ h1 {
     a:visited {
       color: #572a2a; 
         }
-
+        
+    .postit {
+        width: clamp(100px, 5vw, 110px);
+        min-height: clamp(35px, 5vw, 55px);
+        background: linear-gradient(145deg, #fffab6 0%, #fbf3b0 100%);
+        padding: 8px;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        transform: rotate(5deg);
+        font-family: 'Caveat', cursive, sans-serif;
+        position: absolute;    
+        top: 20px;      
+        left: 59%;       
+        transform: rotate(5deg) translateX(20px);
+        cursor: grab;
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 10;
+        font-size: 0.7em;
+    }
+    
+    .postit h1 {
+        font-size: 1.4em;
+        margin: 0 0 3px 0;
+    }
+    
+    .postit p {
+        font-size: 0.85em;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+    @media (max-width: 768px) {
+        .postit {
+            top: 10px;
+            right: 10px;
+            width: 90px;
+            font-size: 0.65em;
+        }
+    }
 
             
 
@@ -157,9 +200,17 @@ h1 {
 
 <body>
   <h1>Lil activity log</h1>
+ 
+
 
 
   <div id="runs"></div>
+  <div class="postit" id="postit">
+    <h1>November!</h1>
+    <p>- Kept at in sunny, rainy, cloudy weather. <br>- Kept moving in morning, lunch, evening, night.</p>
+</div>
+</div>
+  
 
   <script>
     async function loadRuns() {
@@ -185,12 +236,55 @@ h1 {
               <p class="run-title">${run.name}</p>
               <p class="run-details">${dateStr} • ${location} • ${km} km ❤ ${hr} bpm</p>
             </div>
+
           `;
         })
+
+        
         .join('');
+
+        
     }
 
-    loadRuns();
+    loadRuns().then(() => {
+  requestAnimationFrame(() => {
+    const firstRun = document.querySelector('.run-title');
+    const postit = document.getElementById('postit');
+    if (firstRun && postit) {
+      const runTop = firstRun.offsetTop;
+      postit.style.top = (runTop + 165) + 'px';  
+      postit.style.right = '15px';
+      postit.style.left = '199px'; // nollställer left
+    }
+  });
+});
+
+
+    const postit = document.getElementById('postit');
+let isDragging = false;
+let offsetX, offsetY;
+
+postit.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  offsetX = e.offsetX;
+  offsetY = e.offsetY;
+  postit.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (isDragging) {
+    postit.style.position = 'absolute';
+    postit.style.left = e.pageX - offsetX + 'px';
+    postit.style.top = e.pageY - offsetY + 'px';
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  postit.style.cursor = 'grab';
+});
+
+
   </script>
 
     <p class="description">
