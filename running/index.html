@@ -43,11 +43,12 @@ h1 {
   .description {
     font-size: clamp(0.8em, 1.8vw,0.9em);
     color: #1c1212;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     font-family: 'Caveat', cursive;
     text-align: center;
-    margin-top: clamp(0px, 1vw, 4px);
-    margin-bottom: clamp(0px, 2vw, 40px);
+    margin-top: clamp(2px, 2vw, 4px);
+    margin-bottom: clamp(2px, 2vw, 4px);
+    transform: translateY(50%)
   }
 
   #runs {
@@ -75,7 +76,7 @@ h1 {
   #runs::before {
     content: '';
     position: absolute;
-    left: calc(var(--line) * 0.5); 
+    left: calc(var(--line) * 0.8); 
     top: 0;
     bottom: 0;
     width: 2px;
@@ -84,7 +85,7 @@ h1 {
 
   @media (max-width: 500px) {
    #runs::before {
-     left: calc(var(--line) * 0.5);
+     left: calc(var(--line) * 0.65);
   }
 }
  
@@ -109,7 +110,7 @@ h1 {
   
   .run-details {
     line-height: var(--line);
-    transform: translateY(-5%);
+    transform: translateY(-7%);
     font-size: clamp(0.9rem, 1.7vw, 1.1rem);
     font-family: 'Caveat', cursive;
     margin-top: 0px;    
@@ -121,16 +122,28 @@ h1 {
     transform: scale(0.9);      
     transform-origin: top left;  
   }
+}
+
+   .stravalogo {
+                  width: clamp(200px, 15vw, 350px); /* scale the pic */    
+                
+                  object-fit: cover;
+                  object-position: center;
+                  overflow: hidden;
+                  margin-bottom: 0px;
+                  transition: transform 0.3s ease;
+                  box-shadow: none;
+                  transform: scale(0.4);
+            }
+
+            
+
 </style>
 </head>
 
 <body>
   <h1>Lil activity log</h1>
-  <p class="description">
-    (All data from my
-    <a href="https://www.strava.com/athletes/114519096">Strava</a>,
-    synced daily via API to JSON by GitHub workflow!)
-  </p>
+
 
   <div id="runs"></div>
 
@@ -140,7 +153,7 @@ h1 {
       const runs = await res.json();
       const container = document.getElementById('runs');
 
-      container.innerHTML = runs.slice(0, 10)
+      container.innerHTML = runs.slice(0, 15)
         .map(run => {
           const date = new Date(run.start_date_local);
           const dateStr = date.toLocaleDateString('sv-SE', {
@@ -165,5 +178,16 @@ h1 {
 
     loadRuns();
   </script>
+
+    <p class="description">
+    All data sourced via my public
+    <a href="https://www.strava.com/athletes/114519096">Strava</a> profile using Strava's API,
+    synced daily to JSON using a GitHub workflow.
+  </p>
+
+  <div class="stravalogo">
+  <img src="api_logo_pwrdBy_strava_stack_black.svg" 
+         alt="Powered by Strava"
+         </div>
 </body>
 </html>
