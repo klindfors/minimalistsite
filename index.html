@@ -9,16 +9,18 @@
       <title>Kim Lindfors</title>    
     <style>
         
-        @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap&family=Lora&display=swap;');
 
-        body {
-            background-color: #fff0ea;
+        body {/* scrappar #fff0ea;
+            testar #fff4ef
+            testar: #f4f2f0*/
+            background-color: #fff7f2;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif; 
+            font-family: 'Times New Roman', Times, serif, sans-serif; 
         }
         .container {
             text-align: center;
@@ -33,7 +35,7 @@
                   overflow: hidden;
                   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
                   margin-bottom: 5px;
-                  border: 0.4em solid #1c1212;
+                  border: 0.34em solid #1c1212;
                   transition: transform 0.3s ease;
                   box-shadow: none;
             }
@@ -43,31 +45,52 @@
         h1 {
             font-size: 5em;
             color: #1c1212;
-            margin-bottom: 30px;
+            margin-bottom: 0px;
             margin-top: 0px;
-            font-family: 'Square Peg', cursive; 
+            padding-bottom: 0px;
+            font-family: 'Square Peg', serif; 
             font-display: swap; /* render fast */
-        }.social-buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+        }
+
+        p{font-size: 0.97em;
+            color: #1c1212;
+            margin-bottom: 0px;
+            margin-top: 10px;
+            line-height: 1.55em;
+            font-family: 'Lora', serif; 
+            transform: translateY(-17%);
+            font-display: swap; /* render fast */}
+
+            .accent {
+                color: #E68A7A; /* warm peach accent */
+                font-weight: 500;
+                letter-spacing: 0.3px;
+            }
+                    
+        
+        
+        .social-buttons {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
 }
 
 .social-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background-color: #1c1212;
+    background-color: #361c1c;
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
+    transform: scale(0.8);
 }
 
 .social-button:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
@@ -83,11 +106,15 @@
          alt="Portrait of Kim Lindfors" 
          class="kportrait">
     <h1>Kim Lindfors</h1> 
-<!-- hero text: I like building things and  
-                Thriving at the intersection of development and strategic design. 
-    -->
-
     
+    <p>Software Development & Interaction Design. <br>
+        
+    I like building things and running.</p>
+<!--Thriving  at the intersection of technical <br> 
+        development and design thinking. </br>-->
+    
+    
+   
 
     <div class="social-buttons">
         <a class="social-button" href="https://www.linkedin.com/in/kimwl/" target="_blank">
