@@ -69,7 +69,6 @@ h1 {
     width: 90%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
-    overflow: visible !important;
 }
 
 
@@ -124,7 +123,7 @@ h1 {
 
   @media (max-width: 500px) {
   #runs {
-        
+    transform: scale(0.9);      
     transform-origin: top left;  
   }
 }
@@ -161,9 +160,8 @@ h1 {
         transform: rotate(5deg);
         font-family: 'Caveat', cursive, sans-serif;
         position: absolute;    
-        top: 20px;      
-        left: 59%;       
-        transform: rotate(5deg) translateX(20px);
+        top: 50px;
+        right: 30px;
         cursor: grab;
         user-select: none;
         display: flex;
@@ -206,13 +204,12 @@ h1 {
 
   <div id="runs"></div>
 
-   <div class="postit" id="postit">
+   
+      </div>
+  <div class="postit" id="postit">
     <h1>November!</h1>
     <p>- Kept at in sunny, rainy, cloudy weather. <br>- Kept moving in morning, lunch, evening, night.</p>
 </div>
- 
-
-  
 
   <script>
     async function loadRuns() {
@@ -248,21 +245,10 @@ h1 {
         
     }
 
-    loadRuns() /*.then(() => {
-  requestAnimationFrame(() => {
-    const firstRun = document.querySelector('.run-title');
+    loadRuns();
+
+
     const postit = document.getElementById('postit');
-    if (firstRun && postit) {
-      const runTop = firstRun.offsetTop;
-      postit.style.top = (runTop + 165) + 'px';  
-      postit.style.right = '15px';
-      postit.style.left = '199px'; // nollställer left
-    }
-  }); 
-}); */
-
-
-const postit = document.getElementById('postit');
 let isDragging = false;
 let offsetX, offsetY;
 
