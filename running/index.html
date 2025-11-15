@@ -4,93 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lil activity log</title>
-<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="running.css">
 <link href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Caveat&family=Amatic+SC&display=swap" rel="stylesheet">
+<script src="running.js" defer></script> 
 </head>
-
 <body>
   <h1>Lil activity log</h1>
- 
-
-
-
   <div id="runs"></div>
-
-
   </body>
-
-  <script>
-    async function loadRuns() {
-      const res = await fetch('../runs.json');
-      const runs = await res.json();
-      const container = document.getElementById('runs');
-
-      container.innerHTML = runs.slice(0, 15)
-        .map(run => {
-          const date = new Date(run.start_date_local);
-          const dateStr = date.toLocaleDateString('sv-SE', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-          });
-
-          const location = run.location_city || run.location_state || run.location_country || 'Sydney';
-          const km = (run.distance / 1000).toFixed(2);
-          const hr = run.average_heartrate || '--';
-
-          return `
-            <div class="run">
-              <p class="run-title">${run.name}</p>
-              <p class="run-details">${dateStr} • ${location} • ${km} km ❤ ${hr} bpm</p>
-            </div>
-
-          `;
-        })
-
-        .join('');
-
-  
-    }
-
-    loadRuns();
-
-
-const postit = document.getElementById('postit');
-let isDragging = false;
-let offsetX, offsetY;
-
-postit.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  offsetX = e.offsetX;
-  offsetY = e.offsetY;
-  postit.style.cursor = 'grabbing';
-});
-
-document.addEventListener('mousemove', (e) => {
-  if (isDragging) {
-    postit.style.position = 'absolute';
-    postit.style.left = e.pageX - offsetX + 'px';
-    postit.style.top = e.pageY - offsetY + 'px';
-  }
-});
-
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-  postit.style.cursor = 'grab';
-});
-
-
-  </script>
-
     <p class="description">
     All data sourced via my public
     <a href="https://www.strava.com/athletes/114519096">Strava</a> profile using Strava's API,
     synced daily to JSON using a GitHub workflow.
-  </p>
-
-  <div class="stravalogo">
-  <img src="api_logo_pwrdBy_strava_stack_black.svg" 
-         alt="Powered by Strava"
-         </div>
-</body>
+    </p>
+    <div class="stravalogo">
+    <img src="api_logo_pwrdBy_strava_stack_black.svg" alt="Powered by Strava">
+    </div>
+  </body>
 </html>
