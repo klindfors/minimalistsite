@@ -48,17 +48,18 @@ async function updatePlaces() {
   const runsData = JSON.parse(fs.readFileSync(filePath));
   const posts = JSON.parse(runsData);
 
-  posts.forEach((run) => {
-    const coord = JSON.parse(run.start_latlng);
+  posts.forEach((post) => {
+    const coord = JSON.parse(post.start_latlng);
           const lat = coord[0];
           const lon = coord[1];    
     
-    location_city = "http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${secrets.OPENWEATHER_KEY}}";
+    post.location_city = `http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${openwkey}}`;
+    
    ;
     
   });
   
-  const wurl = "http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${secrets.OPENWEATHER_KEY}}";
+  const wurl = "http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${openwkey}}";
    
   //todo
   
