@@ -51,26 +51,29 @@ async function updatePlaces() {
   const filePath = path.join(outputDir, "runs.json");
   const runsData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
      for (const post of runsData) {
-    const coord = post.start_latlng;
-          const lat = coord[0];
-          const lon = coord[1];    
-    
-    try {
-      const wres = await fetch(
-        `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${openwtoken}`
-      );
-
-      if (!wres.ok) {
-        console.error(`OpenWeather API error for activity ${post.id}:`, wres.status);
+      if (!Array.isArray(post.start_latlng)) {
+        post.location_city = null;
         continue;
       }
-      const wdata = await wres.json();
-      post.location_city = wdata[0]?.name || "null";
-    } catch (err) {
-      console.error("Failed to fetch city from coordinates:", post.id, err);
-      post.location_city = null;
+      const coord = post.start_latlng;
+          const lat = coord[0];
+          const lon = coord[1];    
+          try {
+      const wres = await fetch(
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${openwtoken}`
+        );
+
+        if (!wres.ok) {
+          console.error(`OpenWeather API error for activity ${post.id}:`, wres.status);
+          continue;
+        }
+        const wdata = await wres.json();
+        post.location_city = wdata[0]?.name || null;
+      } catch (err) {
+        console.error("Failed to fetch city from coordinates:", post.id, err);
+        post.location_city = null;
+      }
     }
-  }
   fs.writeFileSync(filePath, JSON.stringify(runsData, null, 2));  
 }
 async function update() {
