@@ -51,8 +51,6 @@ async function updatePlaces() {
   const filePath = path.join(outputDir, "runs.json");
   const runsData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
   const posts = JSON.parse(runsData);
-
-
      for (const post of runsData) {
     const coord = post.start_latlng;
           const lat = coord[0];
@@ -67,7 +65,6 @@ async function updatePlaces() {
         console.error(`OpenWeather API error for activity ${post.id}:`, wres.status);
         continue;
       }
-
       const wdata = await wres.json();
       post.location_city = wdata[0]?.name || "null";
     } catch (err) {
@@ -75,13 +72,10 @@ async function updatePlaces() {
       post.location_city = "null";
     }
   }
-
-  fs.writeFileSync(filePath, JSON.stringify(runsData, null, 2))
-  
-  const wurl = "http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${openwkey}}";
-   //todo
-  
+  fs.writeFileSync(filePath, JSON.stringify(runsData, null, 2));  
 }
-
-fetchStrava();
-updatePlaces();
+async function update() {
+  await fetchStrava();
+  await updatePlaces();
+}
+update();
