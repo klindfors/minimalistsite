@@ -78,6 +78,8 @@ async function updatePlaces() {
         post.location_city = null;
       }
     }
+//debug check
+  console.log('New runs.json data:', runsData);
   fs.writeFileSync(filePath, JSON.stringify(runsData, null, 2));  
 }
 async function update() {
