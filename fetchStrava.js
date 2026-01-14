@@ -1,6 +1,6 @@
-import fetch from "node-fetch";
-import fs from "fs";
-import path from "path";
+const fetch = require("node-fetch");
+const fs = require("fs");
+const path = require("path");
 const openwtoken = process.env.OPENWEATHER_KEY;
 const stravatoken = process.env.STRAVA_TOKEN; //keys stored as github secrets
 if (!stravatoken) {
