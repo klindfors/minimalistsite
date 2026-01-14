@@ -35,7 +35,7 @@ jobs:
       - name: Run fetchStrava.js
         run: node fetchStrava.js
         env:
-          STRAVA_TOKEN: ${{ secrets.STRAVA_TOKEN }}
+          STRAVA_TOKEN: ${{ steps.get_token.outputs.token }}
           OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
       - name: Commit and push if changed
         run: |
