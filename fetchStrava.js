@@ -32,7 +32,7 @@ async function fetchStrava() {
     }
     if (JSON.stringify(existing) === JSON.stringify(last30)) {
       console.log("No changes in Strava data. Skipping update.");
-      process.exit(0); 
+      return; //updatePlaces will still run
     }
     fs.writeFileSync(outputFile, JSON.stringify(last30, null, 2));
     console.log(`runs.json updated with ${last30.length} activities`);
@@ -68,7 +68,7 @@ async function updatePlaces() {
       post.location_city = wdata[0]?.name || "null";
     } catch (err) {
       console.error("Failed to fetch city from coordinates:", post.id, err);
-      post.location_city = "null";
+      post.location_city = null;
     }
   }
   fs.writeFileSync(filePath, JSON.stringify(runsData, null, 2));  
