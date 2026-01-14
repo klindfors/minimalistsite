@@ -39,6 +39,7 @@ h1 {
     margin-top: clamp(2px, 2vw, 4px);
     margin-bottom: clamp(2px, 2vw, 4px);
     transform: translateY(50%);
+    padding-bottom: 0.5pc;
   }
 
   #runs {
@@ -113,6 +114,7 @@ h1 {
    .stravalogo {
                   width: clamp(200px, 15vw, 350px); /* scale the pic */    
                   object-fit: cover;
+                  padding: auto;
                   object-position: center;
                   overflow: hidden;
                   margin-bottom: 0px;

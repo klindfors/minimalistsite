@@ -14,16 +14,12 @@
             day: 'numeric'
           });
 
-          //todo: fix location by reverse geocoding with coordinates
+          //todo: include weather data for runs
           
           const km = (run.distance / 1000).toFixed(2);
           const hr = run.average_heartrate || '--';
-          const coord = run.start_latlng;
-          const lat = coord[0];
-          const lon = coord[1];
-          const location = run.location_city || run.location_state || run.location_country || 'Sydney';
-
-        
+          const location = run.location_city;
+      
           
           return `
             <div class="run">
@@ -34,11 +30,8 @@
           `;
         })
 
-        .join('');
-
-  
-    }
-    
+        .join('');  
+    }   
 
     loadRuns();
 
