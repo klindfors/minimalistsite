@@ -63,11 +63,15 @@ async function updatePlaces() {
         `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${openwtoken}`
         );
 
+        
+
         if (!wres.ok) {
           console.error(`OpenWeather API error for activity ${post.id}:`, wres.status);
           continue;
         }
         const wdata = await wres.json();
+        //debug:(
+        console.log(`Run ${post.id}: ${lat},${lon} -> OpenWeather data: ${JSON.stringify(wdata)}`);
         post.location_city = wdata[0]?.name || null;
       } catch (err) {
         console.error("Failed to fetch city from coordinates:", post.id, err);
