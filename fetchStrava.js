@@ -7,8 +7,7 @@ if (!stravatoken) {
   console.error("Error: STRAVA_TOKEN is not defined.");
   process.exit(1);
 }
-const outputDir = "running";
-const outputFile = path.join(outputDir, "runs.json");
+const outputFile = "runs.json";
 const url = "https://www.strava.com/api/v3/athlete/activities?per_page=30";
       
 async function fetchStrava() {
@@ -48,7 +47,7 @@ async function updatePlaces() {
     process.exit(1);
   }
   const fs = require('fs');
-  const filePath = path.join(outputDir, "runs.json");
+  const filePath = "runs.json";
   const runsData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
      for (const post of runsData) {
       if (!Array.isArray(post.start_latlng)) {
