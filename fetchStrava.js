@@ -23,7 +23,7 @@ async function fetchStrava() {
       process.exit(1);
     }
     const data = await res.json();
-    fs.mkdirSync(outputDir, { recursive: true });
+    
     const last30 = data.slice(0, 30);
     let existing = [];
     if (fs.existsSync(outputFile)) {
