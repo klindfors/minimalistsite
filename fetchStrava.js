@@ -1,20 +1,22 @@
 import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
-
-const token = process.env.STRAVA_TOKEN; //keys stored as github secrets
-if (!token) {
+const openwtoken = process.env.OPENWEATHER_KEY;
+const stravatoken = process.env.STRAVA_TOKEN; //keys stored as github secrets
+if (!stravatoken) {
   console.error("Error: STRAVA_TOKEN is not defined.");
   process.exit(1);
 }
 const outputDir = "running";
 const outputFile = path.join(outputDir, "runs.json");
 const url = "https://www.strava.com/api/v3/athlete/activities?per_page=30";
-
+      
 async function fetchStrava() {
+
+
   try {
     const res = await fetch(url, {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: `Bearer ${stravatoken}` },
     });
 
     if (!res.ok) {
@@ -39,4 +41,28 @@ async function fetchStrava() {
     process.exit(1);
   }
 }
+
+async function updatePlaces() {
+  const fs = require('fs');
+  const filePath = './runs.json';
+  const runsData = JSON.parse(fs.readFileSync(filePath));
+  const posts = JSON.parse(runsData);
+
+  posts.forEach((run) => {
+    const coord = JSON.parse(run.start_latlng);
+          const lat = coord[0];
+          const lon = coord[1];    
+    
+    location_city = "http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${secrets.OPENWEATHER_KEY}}";
+   ;
+    
+  });
+  
+  const wurl = "http://api.openweathermap.org/geo/1.0/reverse?{lat}={${lat}}&lon={${lon}}&appid={${secrets.OPENWEATHER_KEY}}";
+   
+  //todo
+  
+}
+
 fetchStrava();
+updatePlaces();
