@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add runs.json
+          git add running/runs.json
           git status
           git commit -m "Daily Strava update" --allow-empty
           git push
