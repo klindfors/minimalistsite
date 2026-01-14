@@ -14,14 +14,21 @@
             day: 'numeric'
           });
 
-          const location = run.location_city || run.location_state || run.location_country || 'Sydney';
+          //todo: fix location by reverse geocoding with coordinates
+          
           const km = (run.distance / 1000).toFixed(2);
           const hr = run.average_heartrate || '--';
+          const coord = run.start_latlng;
+          const lat = coord[0];
+          const lon = coord[1];
+          const location = run.location_city || run.location_state || run.location_country || 'Sydney';
 
+        
+          
           return `
             <div class="run">
-              <p class="run-title">${run.name}</p>
-              <p class="run-details">${dateStr} • ${location} • ${km} km ❤ ${hr} bpm</p>
+              <p class="run-title">${run.name} in ${location}</p>
+              <p class="run-details">${dateStr} • ${km} km  ❤ ${hr} bpm  </p>
             </div>
 
           `;
@@ -34,7 +41,7 @@
 
     loadRuns();
 
-
+//todo: postit with summary of latest month
 const postit = document.getElementById('postit');
 let isDragging = false;
 let offsetX, offsetY;
