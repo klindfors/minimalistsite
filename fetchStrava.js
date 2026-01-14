@@ -50,7 +50,6 @@ async function updatePlaces() {
   const fs = require('fs');
   const filePath = path.join(outputDir, "runs.json");
   const runsData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  const posts = JSON.parse(runsData);
      for (const post of runsData) {
     const coord = post.start_latlng;
           const lat = coord[0];
