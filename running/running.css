@@ -39,6 +39,7 @@ h1 {
     margin-top: clamp(2px, 2vw, 4px);
     margin-bottom: clamp(2px, 2vw, 4px);
     transform: translateY(50%);
+       padding: clamp(10px, 7vw, 20px) clamp(20px, 8vw, 3px);
     padding-bottom: 0.5pc;
   }
 
@@ -77,6 +78,7 @@ h1 {
 }
 .stravalogo{
     align-self: center;
+    
 }
   .run {
   display: flex;
@@ -115,6 +117,7 @@ h1 {
                   width: clamp(200px, 15vw, 350px); /* scale the pic */    
                   object-fit: cover;
                   padding: auto;
+                  padding-top: 1pc;
                   object-position: center;
                   overflow: hidden;
                   margin-bottom: 0px;
