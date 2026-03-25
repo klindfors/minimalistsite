@@ -17,7 +17,7 @@ function formatActivity(run) {
   const isoDate = date.toISOString().split('T')[0];
   //todo: include weather data for runs
   const hr = run.average_heartrate || '--';
-  const title = isStrength(run) ? run.name : `${run.name}`;
+  const title = isStrength(run) ? run.name : `${run.name} in ${run.location_city}`;
   const metric = isStrength(run)
     ? `<data value="${Math.round((run.elapsed_time || run.moving_time || 0) / 60)}">
          ${Math.round((run.elapsed_time || run.moving_time || 0) / 60)} min
