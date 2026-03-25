@@ -6,7 +6,7 @@ async function loadRuns() {
 }
 
 function isStrength(run) {
-  return run.sport_type === 'WeightTraining' || run.type === 'WeightTraining';
+  return run.sport_type === "WeightTraining" || run.type === "WeightTraining";
 }
 
 function formatActivity(run) {
