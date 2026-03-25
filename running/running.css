@@ -38,9 +38,15 @@ h1 {
     text-align: center;
     margin-top: clamp(2px, 2vw, 4px);
     margin-bottom: clamp(2px, 2vw, 4px);
+    margin-right: clamp(20px, 2vw, 20px);
     transform: translateY(50%);
-       padding: clamp(10px, 7vw, 20px) clamp(20px, 8vw, 3px);
-    padding-bottom: 0.5pc;
+      
+       padding-top: clamp(1.1em, 4vw, 1.1em);
+       padding-bottom: clamp(1.1em, 4vw, 1.1em);
+       margin-left: clamp(0.5px, 4vw, 500px);
+       margin-right: clamp(0.5px, 4vw, 500px);
+      
+    
   }
 
   #runs {
