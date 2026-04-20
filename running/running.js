@@ -2,7 +2,7 @@ async function loadRuns() {
   const res = await fetch('../runs.json');
   const runs = await res.json();
   const container = document.getElementById('runs');
-  container.innerHTML = runs.slice(0, 15).map(formatActivity).join('');
+  container.insertAdjacentHTML('beforeend', runs.slice(0, 15).map(formatActivity).join(''));
 }
 
 function isStrength(run) {
