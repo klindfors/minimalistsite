@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lil activity log</title>
-<link rel="stylesheet" type="text/css" href="running.css">
-<link href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Caveat&family=Amatic+SC&display=swap" rel="stylesheet">
-<script src="running.js" defer></script> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lil activity log</title>
+  <link rel="stylesheet" type="text/css" href="running.css">
+  <link href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Caveat&family=Amatic+SC&display=swap"
+    rel="stylesheet">
+  <script src="running.js" defer></script>
 </head>
+
 <body>
   <h1>Lil activity log</h1>
-  <div id="runs"></div>
-  </body>
-    <p class="description"> "Lil activity log" visualises exercise in a semi-analogue format and aims to promote consistency over performance metrics. Activity data from my
-    <a href="https://www.strava.com/athletes/114519096" title="Kim Lindfors at Strava">Strava</a> profile using Strava's API. Location data reverse geocoded via OpenWeatherMap's API.
-    Synced daily to JSON using a GitHub workflow.
-    </p>
-    <div class="stravalogo">
-    <img src="api_logo_pwrdBy_strava_stack_black.svg" alt="Powered by Strava">
+  <div id="runs">
+    <div class="postit" id="postit">
+      <h1>April highlights</h1>
+      <p>April recap</p>
     </div>
-  </body>
+  </div>
+<p class="description"> "Lil activity log" visualises exercise in a semi-analogue format and aims to promote consistency
+  over performance metrics. Activity data from my
+  <a href="https://www.strava.com/athletes/114519096" title="Kim Lindfors at Strava">Strava</a> profile using Strava's
+  API. Location data reverse geocoded via OpenWeatherMap's API.
+  Synced daily to JSON using a GitHub workflow.
+</p>
+<div class="stravalogo">
+  <img src="api_logo_pwrdBy_strava_stack_black.svg" alt="Powered by Strava">
+</div>
+</body>
+
 </html>
