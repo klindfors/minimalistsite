@@ -51,14 +51,14 @@ postit.addEventListener('mousedown', (e) => {
   offsetY = e.offsetY;
   postit.style.cursor = 'grabbing';
 });
-document.addEventListener('mousemove', (e) => {
+postit.addEventListener('mousemove', (e) => {
   if (isDragging) {
     postit.style.position = 'absolute';
     postit.style.left = e.pageX - offsetX + 'px';
     postit.style.top = e.pageY - offsetY + 'px';
   }
 });
-document.addEventListener('mouseup', () => {
+postit.addEventListener('mouseup', () => {
   isDragging = false;
   postit.style.cursor = 'grab';
 });
