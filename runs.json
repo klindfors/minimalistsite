@@ -3,6 +3,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Night Weight Training",
@@ -15,6 +16,7 @@
     "workout_type": 30,
     "device_name": "Garmin vívoactive 6",
     "id": 19040253849,
+    "id_str": "19040253849",
     "start_date": "2026-06-23T19:22:18Z",
     "start_date_local": "2026-06-23T21:22:18Z",
     "timezone": "(GMT+02:00) Africa/Blantyre",
@@ -23,7 +25,7 @@
     "location_state": null,
     "location_country": null,
     "achievement_count": 0,
-    "kudos_count": 2,
+    "kudos_count": 3,
     "comment_count": 0,
     "athlete_count": 1,
     "photo_count": 0,
@@ -62,6 +64,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Evening Run",
@@ -74,6 +77,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 19038053667,
+    "id_str": "19038053667",
     "start_date": "2026-06-23T16:00:27Z",
     "start_date_local": "2026-06-23T18:00:27Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -133,6 +137,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Night Run",
@@ -145,6 +150,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 19026926108,
+    "id_str": "19026926108",
     "start_date": "2026-06-22T20:01:35Z",
     "start_date_local": "2026-06-22T22:01:35Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -204,6 +210,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Evening Run",
@@ -216,6 +223,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 19025023711,
+    "id_str": "19025023711",
     "start_date": "2026-06-22T16:34:21Z",
     "start_date_local": "2026-06-22T18:34:21Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -275,6 +283,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Lunch Run",
@@ -287,6 +296,7 @@
     "workout_type": 0,
     "device_name": "Garmin vívoactive 6",
     "id": 18994406097,
+    "id_str": "18994406097",
     "start_date": "2026-06-20T09:01:17Z",
     "start_date_local": "2026-06-20T11:01:17Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -346,6 +356,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Run",
@@ -358,6 +369,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18955491942,
+    "id_str": "18955491942",
     "start_date": "2026-06-17T09:52:25Z",
     "start_date_local": "2026-06-17T11:52:25Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -417,6 +429,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Cykeltur på morgonen",
@@ -429,6 +442,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18940012343,
+    "id_str": "18940012343",
     "start_date": "2026-06-16T08:21:12Z",
     "start_date_local": "2026-06-16T10:21:12Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -485,6 +499,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Reumatologen spurt",
@@ -497,6 +512,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18939609893,
+    "id_str": "18939609893",
     "start_date": "2026-06-16T07:03:28Z",
     "start_date_local": "2026-06-16T09:03:28Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -553,6 +569,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Lunch Run",
@@ -565,6 +582,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18927572543,
+    "id_str": "18927572543",
     "start_date": "2026-06-15T10:24:36Z",
     "start_date_local": "2026-06-15T12:24:36Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -624,6 +642,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Löpning på kvällen",
@@ -636,6 +655,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18920735964,
+    "id_str": "18920735964",
     "start_date": "2026-06-14T17:19:20Z",
     "start_date_local": "2026-06-14T19:19:20Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -695,6 +715,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Afternoon Weight Training",
@@ -707,6 +728,7 @@
     "workout_type": 30,
     "device_name": "Garmin vívoactive 6",
     "id": 18891177353,
+    "id_str": "18891177353",
     "start_date": "2026-06-12T13:53:41Z",
     "start_date_local": "2026-06-12T15:53:41Z",
     "timezone": "(GMT+02:00) Africa/Blantyre",
@@ -754,6 +776,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Afternoon Run",
@@ -766,6 +789,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18879605271,
+    "id_str": "18879605271",
     "start_date": "2026-06-11T15:22:39Z",
     "start_date_local": "2026-06-11T17:22:39Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -825,6 +849,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Cykeltur på morgonen",
@@ -837,6 +862,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18875154807,
+    "id_str": "18875154807",
     "start_date": "2026-06-11T08:16:58Z",
     "start_date_local": "2026-06-11T10:16:58Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -893,6 +919,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Ride",
@@ -905,6 +932,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18874047601,
+    "id_str": "18874047601",
     "start_date": "2026-06-11T05:45:09Z",
     "start_date_local": "2026-06-11T07:45:09Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -961,6 +989,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Evening Run",
@@ -973,6 +1002,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18853732102,
+    "id_str": "18853732102",
     "start_date": "2026-06-09T16:05:56Z",
     "start_date_local": "2026-06-09T18:05:56Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1032,6 +1062,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Run",
@@ -1044,6 +1075,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18847467776,
+    "id_str": "18847467776",
     "start_date": "2026-06-09T08:19:19Z",
     "start_date_local": "2026-06-09T10:19:19Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1103,6 +1135,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Träningspass på kvällen",
@@ -1115,6 +1148,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18840620983,
+    "id_str": "18840620983",
     "start_date": "2026-06-08T18:01:09Z",
     "start_date_local": "2026-06-08T20:01:09Z",
     "timezone": "(GMT+02:00) Africa/Blantyre",
@@ -1163,6 +1197,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Run",
@@ -1175,6 +1210,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18833819505,
+    "id_str": "18833819505",
     "start_date": "2026-06-08T08:00:37Z",
     "start_date_local": "2026-06-08T10:00:37Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1234,6 +1270,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Vandring på eftermiddagen",
@@ -1245,6 +1282,7 @@
     "sport_type": "Hike",
     "device_name": "Garmin vívoactive 6",
     "id": 18824147393,
+    "id_str": "18824147393",
     "start_date": "2026-06-07T11:52:17Z",
     "start_date_local": "2026-06-07T13:52:17Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1299,6 +1337,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Vandring på eftermiddagen",
@@ -1310,6 +1349,7 @@
     "sport_type": "Hike",
     "device_name": "Garmin vívoactive 6",
     "id": 18811100233,
+    "id_str": "18811100233",
     "start_date": "2026-06-06T12:52:20Z",
     "start_date_local": "2026-06-06T14:52:20Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1364,6 +1404,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Run",
@@ -1376,6 +1417,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18766699183,
+    "id_str": "18766699183",
     "start_date": "2026-06-03T08:04:15Z",
     "start_date_local": "2026-06-03T10:04:15Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1435,6 +1477,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Styrketräning på kvällen",
@@ -1447,6 +1490,7 @@
     "workout_type": 30,
     "device_name": "Garmin vívoactive 6",
     "id": 18758599570,
+    "id_str": "18758599570",
     "start_date": "2026-06-02T16:15:40Z",
     "start_date_local": "2026-06-02T18:15:40Z",
     "timezone": "(GMT+02:00) Africa/Blantyre",
@@ -1494,6 +1538,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Cykeltur på eftermiddagen",
@@ -1506,6 +1551,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18757619524,
+    "id_str": "18757619524",
     "start_date": "2026-06-02T15:50:29Z",
     "start_date_local": "2026-06-02T17:50:29Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1562,6 +1608,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Run",
@@ -1574,6 +1621,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18753391303,
+    "id_str": "18753391303",
     "start_date": "2026-06-02T08:26:25Z",
     "start_date_local": "2026-06-02T10:26:25Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1633,6 +1681,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Morning Run",
@@ -1645,6 +1694,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18725970964,
+    "id_str": "18725970964",
     "start_date": "2026-05-31T08:10:21Z",
     "start_date_local": "2026-05-31T10:10:21Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1704,6 +1754,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Afternoon Weight Training",
@@ -1716,6 +1767,7 @@
     "workout_type": 30,
     "device_name": "Garmin vívoactive 6",
     "id": 18714119436,
+    "id_str": "18714119436",
     "start_date": "2026-05-30T11:23:39Z",
     "start_date_local": "2026-05-30T13:23:39Z",
     "timezone": "(GMT+02:00) Africa/Blantyre",
@@ -1763,6 +1815,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Afternoon Run",
@@ -1775,6 +1828,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18703636389,
+    "id_str": "18703636389",
     "start_date": "2026-05-29T14:14:57Z",
     "start_date_local": "2026-05-29T16:14:57Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1834,6 +1888,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Styrketräning på kvällen",
@@ -1846,6 +1901,7 @@
     "workout_type": 30,
     "device_name": "Garmin vívoactive 6",
     "id": 18693017619,
+    "id_str": "18693017619",
     "start_date": "2026-05-28T17:45:50Z",
     "start_date_local": "2026-05-28T19:45:50Z",
     "timezone": "(GMT+02:00) Africa/Blantyre",
@@ -1893,6 +1949,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Afternoon Run",
@@ -1905,6 +1962,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18659626829,
+    "id_str": "18659626829",
     "start_date": "2026-05-26T11:05:55Z",
     "start_date_local": "2026-05-26T13:05:55Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
@@ -1964,6 +2022,7 @@
     "resource_state": 2,
     "athlete": {
       "id": 114519096,
+      "id_str": "114519096",
       "resource_state": 1
     },
     "name": "Lunch Run",
@@ -1976,6 +2035,7 @@
     "workout_type": null,
     "device_name": "Garmin vívoactive 6",
     "id": 18659184841,
+    "id_str": "18659184841",
     "start_date": "2026-05-26T10:17:32Z",
     "start_date_local": "2026-05-26T12:17:32Z",
     "timezone": "(GMT+01:00) Europe/Stockholm",
