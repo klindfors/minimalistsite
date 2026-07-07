@@ -1,4 +1,6 @@
 name: Update Strava Data
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
 
 on:
   schedule:
@@ -17,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" 
+          node-version: "24" 
       - name: Install dependencies
         run: npm install
       - name: Get short-lived access token
@@ -37,6 +39,7 @@ jobs:
         env:
           STRAVA_TOKEN: ${{ steps.get_token.outputs.token }}
           OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+          
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
