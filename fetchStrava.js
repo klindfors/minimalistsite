@@ -60,9 +60,7 @@ async function updatePlaces() {
           try {
       const wres = await fetch(
         `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${openwtoken}`
-        );
-
-        
+        );    
 
         if (!wres.ok) {
           console.error(`OpenWeather API error for activity ${post.id}:`, wres.status);
