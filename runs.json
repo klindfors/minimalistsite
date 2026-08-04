@@ -6,7 +6,7 @@
       "id_str": "114519096",
       "resource_state": 1
     },
-    "name": "Cykeltur på kvällen",
+    "name": "Evening Ride",
     "distance": 1949.7,
     "moving_time": 585,
     "elapsed_time": 991,
@@ -37,8 +37,8 @@
     "trainer": false,
     "commute": false,
     "manual": false,
-    "private": true,
-    "visibility": "only_me",
+    "private": false,
+    "visibility": "everyone",
     "flagged": false,
     "gear_id": null,
     "start_latlng": [
