@@ -11,6 +11,12 @@ async function loadRuns() {
   initDrag(postit, container);
 }
 
+function postit(){
+ const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+ const postit = document.getElementById('postit');
+ postit.querySelector('h1').textContent = `${currentMonth} highlights`; 
+}
+
 function isStrength(run) {
   return run.sport_type === "WeightTraining" || run.type === "WeightTraining";
 }
