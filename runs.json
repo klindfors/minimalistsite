@@ -6,7 +6,7 @@
       "id_str": "114519096",
       "resource_state": 1
     },
-    "name": "Löpning på morgonen",
+    "name": "Morning Run",
     "distance": 7233.1,
     "moving_time": 3329,
     "elapsed_time": 3373,
@@ -25,7 +25,7 @@
     "location_state": null,
     "location_country": null,
     "achievement_count": 2,
-    "kudos_count": 0,
+    "kudos_count": 4,
     "comment_count": 0,
     "athlete_count": 1,
     "photo_count": 0,
@@ -37,8 +37,8 @@
     "trainer": false,
     "commute": false,
     "manual": false,
-    "private": true,
-    "visibility": "only_me",
+    "private": false,
+    "visibility": "everyone",
     "flagged": false,
     "gear_id": "g29658507",
     "start_latlng": [
@@ -69,7 +69,7 @@
     "external_id": "garmin_ping_641146156661",
     "from_accepted_tag": false,
     "pr_count": 1,
-    "total_photo_count": 0,
+    "total_photo_count": 3,
     "has_kudoed": false,
     "suffer_score": 56
   },
