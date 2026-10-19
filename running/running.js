@@ -44,17 +44,17 @@ function weatherType(weather) {
 }
 
 function weatherIcon(weather) {
-  if (weather.icon) return weather.icon;
+  if (weather.icon) return weather.icon.replace('d', 'n');
   const text = `${weather.main || ''} ${weather.description || ''}`.toLowerCase();
-  if (text.includes('thunder')) return '11d';
-  if (text.includes('snow') || text.includes('sleet') || text.includes('freezing')) return '13d';
-  if (text.includes('drizzle') || text.includes('shower')) return '09d';
-  if (text.includes('rain')) return '10d';
-  if (text.includes('clear')) return '01d';
-  if (text.includes('few clouds')) return '02d';
-  if (text.includes('scattered clouds')) return '03d';
-  if (text.includes('cloud')) return '04d';
-  return '50d';
+  if (text.includes('thunder')) return '11n';
+  if (text.includes('snow') || text.includes('sleet') || text.includes('freezing')) return '13n';
+  if (text.includes('drizzle') || text.includes('shower')) return '09n';
+  if (text.includes('rain')) return '10n';
+  if (text.includes('clear')) return '01n';
+  if (text.includes('few clouds')) return '02n';
+  if (text.includes('scattered clouds')) return '03n';
+  if (text.includes('cloud')) return '04n';
+  return '50n';
 }
 
 function recap(runs) {

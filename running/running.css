@@ -179,3 +179,8 @@ h1 {
             font-size: 0.65em;
         }
     }
+        
+
+.run-weather img {
+  vertical-align: middle;
+}
