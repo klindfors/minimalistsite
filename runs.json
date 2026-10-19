@@ -9,7 +9,7 @@
     "elapsed_time": 3441,
     "average_heartrate": 147.6,
     "location_city": "Stockholm",
-    "weather": null
+    "weather":{ "temp": 8, "main": "Clouds", "description": "few clouds", "wind": 2 }
   },
   {
     "name": "Morning Run",
