@@ -88,6 +88,7 @@ async function getWeather(lat, lon) {
       temp: Math.round(w.main.temp),
       main: w.weather?.[0]?.main || null,
       description: w.weather?.[0]?.description || null,
+      icon: w.weather?.[0]?.icon || null,
       wind: Math.round(w.wind?.speed ?? 0),
     };
   } catch (err) {
