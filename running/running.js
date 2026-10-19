@@ -43,6 +43,20 @@ function weatherType(weather) {
   return null;
 }
 
+function weatherIcon(weather) {
+  if (weather.icon) return weather.icon;
+  const text = `${weather.main || ''} ${weather.description || ''}`.toLowerCase();
+  if (text.includes('thunder')) return '11d';
+  if (text.includes('snow') || text.includes('sleet') || text.includes('freezing')) return '13d';
+  if (text.includes('drizzle') || text.includes('shower')) return '09d';
+  if (text.includes('rain')) return '10d';
+  if (text.includes('clear')) return '01d';
+  if (text.includes('few clouds')) return '02d';
+  if (text.includes('scattered clouds')) return '03d';
+  if (text.includes('cloud')) return '04d';
+  return '50d';
+}
+
 function recap(runs) {
   const now = new Date();
   const ym = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
@@ -81,7 +95,7 @@ function formatActivity(run) {
   const mins = Math.round((run.elapsed_time || run.moving_time || 0) / 60);
   const km = ((run.distance || 0) / 1000).toFixed(2);
   const weather = run.weather
-    ? `<span class="run-weather">${run.weather.temp}°C ${esc(run.weather.description)}</span>`
+    ? `<span class="run-weather"><img src="https://openweathermap.org/payload/api/media/file/${esc(weatherIcon(run.weather))}.png" alt="${esc(run.weather.description)}" title="${esc(run.weather.description)}" width="24" height="24"> ${run.weather.temp}°C</span>`
     : '';
   const metric = isStrength(run)
     ? `<data value="${mins}">${mins} min</data>`
