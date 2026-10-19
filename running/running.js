@@ -56,12 +56,10 @@ function formatActivity(run) {
     </article>
   `;
 }
- 
 function initDrag(postit, container) {
-  let isDragging = false;
-  let offsetX, offsetY;
- 
-  postit.addEventListener('pointerdown', (e) => {
+    let isDragging = false;
+    let offsetX, offsetY;
+    postit.addEventListener('pointerdown', (e) => {
     isDragging = true;
     offsetX = e.offsetX;
     offsetY = e.offsetY;
