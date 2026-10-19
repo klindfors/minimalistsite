@@ -3,7 +3,8 @@ name: Update Strava Data
 
 on:
   schedule:
-    - cron: "0 5 * * *"  
+    - cron: "0 9-22 * * *"
+      timezone: "Europe/Stockholm"
   workflow_dispatch:
 
 permissions:

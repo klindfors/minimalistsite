@@ -13,7 +13,17 @@ if (!openwtoken) {
 const outputFile = "runs.json";
 const url = "https://www.strava.com/api/v3/athlete/activities?per_page=100";
 const fields = ["name", "type", "sport_type", "start_date_local", "distance",
-  "moving_time", "elapsed_time", "average_heartrate", "location_city"];
+  "moving_time", "elapsed_time", "average_heartrate", "location_city", "weather"];
+const maxAge = 3 * 60 * 60 * 1000;
+
+function loadExisting() {
+  if (!fs.existsSync(outputFile)) return [];
+  return JSON.parse(fs.readFileSync(outputFile, "utf-8"));
+}
+
+function findOld(existing, run) {
+  return existing.find((old) => old.start_date_local === run.start_date_local);
+}
 
 async function fetchStrava() {
   try {
@@ -32,8 +42,13 @@ async function fetchStrava() {
   }
 }
 
-async function updatePlaces(runs) {
+async function updatePlaces(runs, existing) {
   for (const post of runs) {
+    const old = findOld(existing, post);
+    if (old?.location_city) {
+      post.location_city = old.location_city;
+      continue;
+    }
     if (!Array.isArray(post.start_latlng) || post.start_latlng.length < 2) {
       post.location_city = null;
       continue;
@@ -59,18 +74,56 @@ async function updatePlaces(runs) {
   }
 }
 
+async function getWeather(lat, lon) {
+  try {
+    const res = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${openwtoken}`
+    );
+    if (!res.ok) {
+      console.error("OpenWeather weather error:", res.status);
+      return null;
+    }
+    const w = await res.json();
+    return {
+      temp: Math.round(w.main.temp),
+      description: w.weather?.[0]?.description || null,
+      wind: Math.round(w.wind?.speed ?? 0),
+    };
+  } catch (err) {
+    console.error("Failed to fetch weather:", err);
+    return null;
+  }
+}
+
+async function updateWeather(runs, existing) {
+  for (const post of runs) {
+    const old = findOld(existing, post);
+    if (old?.weather) {
+      post.weather = old.weather;
+      continue;
+    }
+    const end = Date.parse(post.start_date) + (post.elapsed_time || 0) * 1000;
+    const recent = Date.now() - end <= maxAge;
+    if (!recent || !Array.isArray(post.start_latlng) || post.start_latlng.length < 2) {
+      post.weather = null;
+      continue;
+    }
+    const [lat, lon] = post.start_latlng;
+    post.weather = await getWeather(lat, lon);
+    console.log(`Weather for run ${post.id}: ${post.weather ? "ok" : "none"}`);
+  }
+}
+
 function slim(runs) {
   return runs.map((run) => Object.fromEntries(fields.map((f) => [f, run[f] ?? null])));
 }
 
 async function update() {
+  const existing = loadExisting();
   const runs = await fetchStrava(); //updatePlaces will still run
-  await updatePlaces(runs);
+  await updatePlaces(runs, existing);
+  await updateWeather(runs, existing);
   const out = slim(runs);
-  let existing = [];
-  if (fs.existsSync(outputFile)) {
-    existing = JSON.parse(fs.readFileSync(outputFile, "utf-8"));
-  }
   if (JSON.stringify(existing) === JSON.stringify(out)) {
     console.log("No changes in Strava data. Skipping update.");
     return;
