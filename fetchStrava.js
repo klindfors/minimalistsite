@@ -11,7 +11,7 @@ if (!openwtoken) {
   process.exit(1);
 }
 const outputFile = "runs.json";
-const url = "https://www.strava.com/api/v3/athlete/activities?per_page=30";
+const url = "https://www.strava.com/api/v3/athlete/activities?per_page=100";
 const fields = ["name", "type", "sport_type", "start_date_local", "distance",
   "moving_time", "elapsed_time", "average_heartrate", "location_city"];
 
@@ -25,7 +25,7 @@ async function fetchStrava() {
       process.exit(1);
     }
     const data = await res.json();
-    return data.slice(0, 30);
+    return data.filter((run) => run.visibility === "everyone").slice(0, 30);
   } catch (err) {
     console.error("Fetch failed:", err);
     process.exit(1);
