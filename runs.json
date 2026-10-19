@@ -8,7 +8,8 @@
     "moving_time": 3329,
     "elapsed_time": 3373,
     "average_heartrate": 147.3,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Afternoon Ride",
@@ -19,7 +20,8 @@
     "moving_time": 2093,
     "elapsed_time": 2189,
     "average_heartrate": 124.4,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Morning Run",
@@ -30,7 +32,8 @@
     "moving_time": 5992,
     "elapsed_time": 6127,
     "average_heartrate": 135.2,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Afternoon Run",
@@ -41,7 +44,8 @@
     "moving_time": 13580,
     "elapsed_time": 13581,
     "average_heartrate": 153.8,
-    "location_city": "Lidingö kommun"
+    "location_city": "Lidingö kommun",
+    "weather": null
   },
   {
     "name": "Afternoon Ride",
@@ -52,7 +56,8 @@
     "moving_time": 1008,
     "elapsed_time": 1008,
     "average_heartrate": 147.3,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Lunch Run",
@@ -63,7 +68,8 @@
     "moving_time": 1538,
     "elapsed_time": 1547,
     "average_heartrate": 146.8,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Morning Run",
@@ -74,7 +80,8 @@
     "moving_time": 3737,
     "elapsed_time": 3767,
     "average_heartrate": 147.3,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Morning Run",
@@ -85,7 +92,8 @@
     "moving_time": 3602,
     "elapsed_time": 4182,
     "average_heartrate": 139.8,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Lunch Run",
@@ -96,7 +104,8 @@
     "moving_time": 2095,
     "elapsed_time": 3546,
     "average_heartrate": 144.9,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Morning Run",
@@ -107,7 +116,8 @@
     "moving_time": 1671,
     "elapsed_time": 1866,
     "average_heartrate": 140.4,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Afternoon Ride",
@@ -118,7 +128,8 @@
     "moving_time": 1358,
     "elapsed_time": 1406,
     "average_heartrate": 152,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Morning Run",
@@ -129,7 +140,8 @@
     "moving_time": 1517,
     "elapsed_time": 2626,
     "average_heartrate": 151.6,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Afternoon Ride",
@@ -140,7 +152,8 @@
     "moving_time": 970,
     "elapsed_time": 1045,
     "average_heartrate": 141.2,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Morning Run",
@@ -151,7 +164,8 @@
     "moving_time": 5200,
     "elapsed_time": 5222,
     "average_heartrate": 139.7,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Night Ride",
@@ -162,7 +176,8 @@
     "moving_time": 2257,
     "elapsed_time": 2274,
     "average_heartrate": 119.5,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Night Ride",
@@ -173,7 +188,8 @@
     "moving_time": 5138,
     "elapsed_time": 5878,
     "average_heartrate": 129.9,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   },
   {
     "name": "Afternoon Ride",
@@ -184,6 +200,7 @@
     "moving_time": 1969,
     "elapsed_time": 2201,
     "average_heartrate": 125.1,
-    "location_city": "Stockholm"
+    "location_city": "Stockholm",
+    "weather": null
   }
 ]
