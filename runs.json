@@ -1,38 +1,5 @@
 [
   {
-    "name": "Lunch Run",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-10-19T11:17:58Z",
-    "distance": 7793.4,
-    "moving_time": 3430,
-    "elapsed_time": 3441,
-    "average_heartrate": 147.6,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på eftermiddagen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-18T15:48:06Z",
-    "distance": 2943.4,
-    "moving_time": 677,
-    "elapsed_time": 705,
-    "average_heartrate": 144,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på kvällen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-15T18:02:43Z",
-    "distance": 2907.7,
-    "moving_time": 1077,
-    "elapsed_time": 1560,
-    "average_heartrate": 122,
-    "location_city": "Stockholm"
-  },
-  {
     "name": "Morning Run",
     "type": "Run",
     "sport_type": "Run",
@@ -41,94 +8,6 @@
     "moving_time": 3329,
     "elapsed_time": 3373,
     "average_heartrate": 147.3,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på eftermiddagen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-10T16:50:59Z",
-    "distance": 1915.1,
-    "moving_time": 547,
-    "elapsed_time": 617,
-    "average_heartrate": 103,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur vid lunch",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-10T12:35:50Z",
-    "distance": 6843.4,
-    "moving_time": 2199,
-    "elapsed_time": 3054,
-    "average_heartrate": 106.6,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på kvällen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-08T19:30:55Z",
-    "distance": 1278.2,
-    "moving_time": 305,
-    "elapsed_time": 548,
-    "average_heartrate": 118,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på eftermiddagen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-07T17:57:52Z",
-    "distance": 3302,
-    "moving_time": 883,
-    "elapsed_time": 976,
-    "average_heartrate": 131.7,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Morning Run",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-10-05T10:28:39Z",
-    "distance": 3733.5,
-    "moving_time": 1602,
-    "elapsed_time": 2171,
-    "average_heartrate": 146.8,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på natten",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-04T23:16:50Z",
-    "distance": 7439.2,
-    "moving_time": 1602,
-    "elapsed_time": 1791,
-    "average_heartrate": 111.1,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på eftermiddagen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-04T16:14:14Z",
-    "distance": 5472.2,
-    "moving_time": 1215,
-    "elapsed_time": 1234,
-    "average_heartrate": 136.7,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på natten",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-03T23:56:09Z",
-    "distance": 8668.5,
-    "moving_time": 1789,
-    "elapsed_time": 1875,
-    "average_heartrate": 118.4,
     "location_city": "Stockholm"
   },
   {
@@ -143,94 +22,6 @@
     "location_city": "Stockholm"
   },
   {
-    "name": "Cykeltur på natten",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-02T23:31:34Z",
-    "distance": 1998,
-    "moving_time": 492,
-    "elapsed_time": 524,
-    "average_heartrate": 97.3,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på kvällen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-02T20:56:22Z",
-    "distance": 2161.5,
-    "moving_time": 601,
-    "elapsed_time": 677,
-    "average_heartrate": 120.1,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på kvällen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-02T18:45:18Z",
-    "distance": 5543.4,
-    "moving_time": 1342,
-    "elapsed_time": 1631,
-    "average_heartrate": 112.7,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på eftermiddagen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-10-02T14:09:16Z",
-    "distance": 4050.7,
-    "moving_time": 947,
-    "elapsed_time": 3786,
-    "average_heartrate": 104.7,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på morgonen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-29T10:09:42Z",
-    "distance": 2678.6,
-    "moving_time": 785,
-    "elapsed_time": 2938,
-    "average_heartrate": 96.8,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Evening Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-27T20:20:10Z",
-    "distance": 1998.4,
-    "moving_time": 528,
-    "elapsed_time": 634,
-    "average_heartrate": 101.6,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på kvällen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-27T18:56:55Z",
-    "distance": 2077.2,
-    "moving_time": 599,
-    "elapsed_time": 1483,
-    "average_heartrate": 110.8,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på eftermiddagen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-27T16:16:44Z",
-    "distance": 2828.8,
-    "moving_time": 916,
-    "elapsed_time": 2946,
-    "average_heartrate": 103.5,
-    "location_city": "Stockholm"
-  },
-  {
     "name": "Morning Run",
     "type": "Run",
     "sport_type": "Run",
@@ -239,28 +30,6 @@
     "moving_time": 5992,
     "elapsed_time": 6127,
     "average_heartrate": 135.2,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Night Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-26T21:57:31Z",
-    "distance": 2017.6,
-    "moving_time": 534,
-    "elapsed_time": 638,
-    "average_heartrate": 103.1,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Night Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-26T21:03:06Z",
-    "distance": 1950.6,
-    "moving_time": 540,
-    "elapsed_time": 540,
-    "average_heartrate": 120.6,
     "location_city": "Stockholm"
   },
   {
@@ -275,50 +44,6 @@
     "location_city": "Lidingö kommun"
   },
   {
-    "name": "Löpning på morgonen",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-09-25T07:24:50Z",
-    "distance": 2189.1,
-    "moving_time": 883,
-    "elapsed_time": 892,
-    "average_heartrate": 147.6,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Cykeltur på kvällen",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-21T20:14:14Z",
-    "distance": 3904.8,
-    "moving_time": 1034,
-    "elapsed_time": 2742,
-    "average_heartrate": 103.8,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Lunch Run",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-09-21T12:15:57Z",
-    "distance": 3471.8,
-    "moving_time": 1467,
-    "elapsed_time": 1480,
-    "average_heartrate": 144.5,
-    "location_city": "Stockholm"
-  },
-  {
-    "name": "Night Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-09-20T00:34:11Z",
-    "distance": 5285.7,
-    "moving_time": 901,
-    "elapsed_time": 946,
-    "average_heartrate": 122.6,
-    "location_city": "Stockholm"
-  },
-  {
     "name": "Afternoon Ride",
     "type": "Ride",
     "sport_type": "Ride",
@@ -327,6 +52,138 @@
     "moving_time": 1008,
     "elapsed_time": 1008,
     "average_heartrate": 147.3,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Lunch Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-09-18T12:27:28Z",
+    "distance": 3556.6,
+    "moving_time": 1538,
+    "elapsed_time": 1547,
+    "average_heartrate": 146.8,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-09-16T10:09:25Z",
+    "distance": 8110.6,
+    "moving_time": 3737,
+    "elapsed_time": 3767,
+    "average_heartrate": 147.3,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-09-06T10:02:09Z",
+    "distance": 6967.1,
+    "moving_time": 3602,
+    "elapsed_time": 4182,
+    "average_heartrate": 139.8,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Lunch Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-09-05T12:50:21Z",
+    "distance": 4913,
+    "moving_time": 2095,
+    "elapsed_time": 3546,
+    "average_heartrate": 144.9,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-09-04T06:56:10Z",
+    "distance": 3836.9,
+    "moving_time": 1671,
+    "elapsed_time": 1866,
+    "average_heartrate": 140.4,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Afternoon Ride",
+    "type": "Ride",
+    "sport_type": "Ride",
+    "start_date_local": "2026-09-02T16:40:09Z",
+    "distance": 7369.3,
+    "moving_time": 1358,
+    "elapsed_time": 1406,
+    "average_heartrate": 152,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-09-02T09:32:22Z",
+    "distance": 3512.1,
+    "moving_time": 1517,
+    "elapsed_time": 2626,
+    "average_heartrate": 151.6,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Afternoon Ride",
+    "type": "Ride",
+    "sport_type": "Ride",
+    "start_date_local": "2026-08-30T13:53:21Z",
+    "distance": 3537.1,
+    "moving_time": 970,
+    "elapsed_time": 1045,
+    "average_heartrate": 141.2,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-08-30T10:09:19Z",
+    "distance": 10622.7,
+    "moving_time": 5200,
+    "elapsed_time": 5222,
+    "average_heartrate": 139.7,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Night Ride",
+    "type": "Ride",
+    "sport_type": "Ride",
+    "start_date_local": "2026-08-30T01:18:07Z",
+    "distance": 9418.5,
+    "moving_time": 2257,
+    "elapsed_time": 2274,
+    "average_heartrate": 119.5,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Night Ride",
+    "type": "Ride",
+    "sport_type": "Ride",
+    "start_date_local": "2026-08-29T22:02:05Z",
+    "distance": 21395.2,
+    "moving_time": 5138,
+    "elapsed_time": 5878,
+    "average_heartrate": 129.9,
+    "location_city": "Stockholm"
+  },
+  {
+    "name": "Afternoon Ride",
+    "type": "Ride",
+    "sport_type": "Ride",
+    "start_date_local": "2026-08-29T14:22:36Z",
+    "distance": 7172.5,
+    "moving_time": 1969,
+    "elapsed_time": 2201,
+    "average_heartrate": 125.1,
     "location_city": "Stockholm"
   }
 ]
