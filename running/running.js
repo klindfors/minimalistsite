@@ -56,30 +56,31 @@ function formatActivity(run) {
     </article>
   `;
 }
-
+ 
 function initDrag(postit, container) {
   let isDragging = false;
   let offsetX, offsetY;
-
-  postit.addEventListener('mousedown', (e) => {
+ 
+  postit.addEventListener('pointerdown', (e) => {
     isDragging = true;
     offsetX = e.offsetX;
     offsetY = e.offsetY;
+    postit.setPointerCapture(e.pointerId);
     postit.style.cursor = 'grabbing';
   });
-
-  document.addEventListener('mousemove', (e) => {
+ 
+  postit.addEventListener('pointermove', (e) => {
     if (isDragging) {
       const rect = container.getBoundingClientRect();
       postit.style.left = (e.clientX - rect.left - offsetX) + 'px';
       postit.style.top = (e.clientY - rect.top - offsetY) + 'px';
     }
   });
-
-  document.addEventListener('mouseup', () => {
+ 
+  postit.addEventListener('pointerup', () => {
     isDragging = false;
     postit.style.cursor = 'grab';
   });
 }
-
+ 
 loadRuns();
