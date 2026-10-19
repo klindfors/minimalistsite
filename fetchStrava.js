@@ -86,6 +86,7 @@ async function getWeather(lat, lon) {
     const w = await res.json();
     return {
       temp: Math.round(w.main.temp),
+      main: w.weather?.[0]?.main || null,
       description: w.weather?.[0]?.description || null,
       wind: Math.round(w.wind?.speed ?? 0),
     };
