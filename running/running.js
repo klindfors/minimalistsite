@@ -9,14 +9,33 @@ async function loadRuns() {
     container.textContent = 'Could not load activities right now.';
     return;
   }
-  container.innerHTML = runs.slice(0, 15).map(formatActivity).join('');
+  const shown = runs.slice(0, 15);
+  container.innerHTML = shown.map(formatActivity).join('');
+  const now = new Date();
+  addPostit(container, now, recap(runs, monthKey(now))
+    || '<p>No runs yet this month. The first one is the best one!</p>');
+  const last = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+  const lastText = recap(runs, monthKey(last));
+  const row = shown.findIndex((run) => run.type === 'Run' && run.start_date_local?.startsWith(monthKey(last)));
+  if (lastText && row !== -1) {
+    const postit = addPostit(container, last, lastText);
+    postit.style.top = container.querySelectorAll('.run')[row].offsetTop + 'px';
+    postit.style.transform = 'rotate(-4deg)';
+  }
+}
+
+function monthKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+}
+
+function addPostit(container, date, text) {
   const postit = document.createElement('div');
   postit.className = 'postit';
-  postit.id = 'postit';
-  const month = new Date().toLocaleString('en-GB', { month: 'long' });
-  postit.innerHTML = `<h1>${month} highlights</h1>${recap(runs)}`;
+  const month = date.toLocaleString('en-GB', { month: 'long' });
+  postit.innerHTML = `<h1>${month} highlights</h1>${text}`;
   container.appendChild(postit);
   initDrag(postit, container);
+  return postit;
 }
 
 function list(items) {
@@ -57,11 +76,9 @@ function weatherIcon(weather) {
   return '50n';
 }
 
-function recap(runs) {
-  const now = new Date();
-  const ym = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-  const month = runs.filter((run) => run.type === 'Run' && run.start_date_local?.startsWith(ym));
-  if (!month.length) return '<p>No runs yet this month. The first one is the best one!</p>';
+function recap(runs, key) {
+  const month = runs.filter((run) => run.type === 'Run' && run.start_date_local?.startsWith(key));
+  if (!month.length) return '';
   const order = ['in the morning', 'at lunchtime', 'in the afternoon', 'in the evening', 'at night'];
   const times = order.filter((t) => month.some((run) => timeOfDay(run) === t));
   const kinds = ['rain', 'sun', 'cloudy weather', 'snow', 'fog', 'thunder'];
