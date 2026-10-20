@@ -8,9 +8,9 @@
   
   if (code) {
     //redirecting back to SafeRunner with the authorization code
-    window.location.href = 'saferunner://callback?code=' + code;
+    window.location.href = 'saferunner://callback' + window.location.search;
   } else {
-    document.body.innerHTML = 'Authentication failed: ' + error;
+    document.body.textContent = 'Authentication failed: ' + error;
   }
 </script>
 <p>Redirecting back to SafeRunner...</p>
