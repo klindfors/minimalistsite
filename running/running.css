@@ -144,7 +144,7 @@ h1 {
         min-height: clamp(35px, 5vw, 55px);
         background: linear-gradient(145deg, #fffab6 0%, #fbf3b0 100%);
         padding: 8px;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        box-shadow: 3px 8px 10px -4px rgba(0,0,0,0.3);
         transform: rotate(5deg);
         font-family: 'Caveat', cursive, sans-serif;
         position: absolute;    
