@@ -32,7 +32,6 @@ h1 {
     color: #1c1212;
     font-family: 'Caveat', cursive;
     text-align: center;
-    transform: translateY(50%);
     padding-top: 0;
     padding-bottom: clamp(1.1em, 4vw, 1.1em);
     margin: clamp(2px, 2vw, 4px) auto;
