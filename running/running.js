@@ -12,13 +12,13 @@ async function loadRuns() {
   const shown = runs.slice(0, 15);
   container.innerHTML = shown.map(formatActivity).join('');
   const now = new Date();
-  addPostit(container, now, recap(runs, monthKey(now))
+  addPostit(container, now, monthWeatherIcons(runs, monthKey(now)), recap(runs, monthKey(now))
     || '<p>No runs yet this month. The first one is the best one!</p>');
   const last = new Date(now.getFullYear(), now.getMonth() - 1, 1);
   const lastText = recap(runs, monthKey(last));
   const row = shown.findIndex((run) => run.type === 'Run' && run.start_date_local?.startsWith(monthKey(last)));
   if (lastText && row !== -1) {
-    const postit = addPostit(container, last, lastText);
+      const postit = addPostit(container, last, monthWeatherIcons(runs, monthKey(last)), lastText);
     postit.style.top = container.querySelectorAll('.run')[row].offsetTop + 'px';
     postit.style.transform = 'rotate(-4deg)';
   }
@@ -28,11 +28,11 @@ function monthKey(date) {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
 }
 
-function addPostit(container, date, text) {
+function addPostit(container, date, weatherIcons, text) {
   const postit = document.createElement('div');
   postit.className = 'postit';
   const month = date.toLocaleString('en-GB', { month: 'long' });
-  postit.innerHTML = `<h1>${month} highlights</h1>${text}`;
+  postit.innerHTML = `<h1>${month} ${weatherIcons}</h1>${text}`;
   container.appendChild(postit);
   initDrag(postit, container);
   return postit;
@@ -74,6 +74,16 @@ function weatherIcon(weather) {
   if (text.includes('scattered clouds')) return '03n';
   if (text.includes('cloud')) return '04n';
   return '50n';
+}
+
+function monthWeatherIcons(runs, key) {
+  const iconDescriptions = new Map();
+  runs.filter((run) => run.type === 'Run' && run.weather && run.start_date_local?.startsWith(key)).forEach((run) => {
+    const icon = weatherIcon(run.weather);
+    if (!iconDescriptions.has(icon)) iconDescriptions.set(icon, run.weather.description);
+  });
+  return [...iconDescriptions].sort(([a], [b]) => a.localeCompare(b)).map(([icon, description]) =>
+    `<img src="https://openweathermap.org/payload/api/media/file/${esc(icon)}.png" alt="${esc(description)}" title="${esc(description)}" width="24" height="24">`).join('');
 }
 
 function recap(runs, key) {

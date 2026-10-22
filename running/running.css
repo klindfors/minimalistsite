@@ -163,12 +163,23 @@ h1 {
     .postit h1 {
         font-size: 1.4em;
         margin: 0 0 3px 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2px;
     }
     
     .postit p {
         font-size: 0.85em;
         margin: 0;
         line-height: 1.2;
+    }
+
+    .postit .postit-weather {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        margin-top: 3px;
     }
     
     @media (max-width: 768px) {
