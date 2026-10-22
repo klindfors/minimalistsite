@@ -30,20 +30,15 @@ h1 {
   .description {
     font-size: clamp(0.8em, 1.8vw,0.9em);
     color: #1c1212;
-    margin-bottom: 5px;
     font-family: 'Caveat', cursive;
     text-align: center;
-    margin-top: clamp(2px, 2vw, 4px);
-    margin-bottom: clamp(2px, 2vw, 4px);
-    margin-right: clamp(20px, 2vw, 20px);
     transform: translateY(50%);
-      
-       padding-top: clamp(1.1em, 4vw, 1.1em);
-       padding-bottom: clamp(1.1em, 4vw, 1.1em);
-       margin-left: clamp(0.5px, 4vw, 500px);
-       margin-right: clamp(0.5px, 4vw, 500px);
-      
-    
+    padding-top: 0;
+    padding-bottom: clamp(1.1em, 4vw, 1.1em);
+    margin: clamp(2px, 2vw, 4px) auto;
+    width: 80%;
+    max-width: 640px;
+    box-sizing: border-box;
   }
 
   #runs {
