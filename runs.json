@@ -1,5 +1,17 @@
 [
   {
+    "name": "Evening Weight Training",
+    "type": "WeightTraining",
+    "sport_type": "WeightTraining",
+    "start_date_local": "2026-10-22T20:01:12Z",
+    "distance": 0,
+    "moving_time": 1806,
+    "elapsed_time": 1806,
+    "average_heartrate": 130.8,
+    "location_city": null,
+    "weather": null
+  },
+  {
     "name": "Lunch Run",
     "type": "Run",
     "sport_type": "Run",
