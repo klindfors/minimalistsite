@@ -1,5 +1,23 @@
 [
   {
+    "name": "Lunch Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-10-26T11:57:54Z",
+    "distance": 10562.4,
+    "moving_time": 4715,
+    "elapsed_time": 4756,
+    "average_heartrate": 145,
+    "location_city": "Stockholm",
+    "weather": {
+      "temp": 12,
+      "main": "Clouds",
+      "description": "broken clouds",
+      "icon": "04d",
+      "wind": 6
+    }
+  },
+  {
     "name": "Evening Weight Training",
     "type": "WeightTraining",
     "sport_type": "WeightTraining",
