@@ -1,5 +1,17 @@
 [
   {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
+    "start_date_local": "2026-10-27T08:26:34Z",
+    "distance": 3163.3,
+    "moving_time": 1351,
+    "elapsed_time": 1364,
+    "average_heartrate": 148.5,
+    "location_city": "Stockholm",
+    "weather": null
+  },
+  {
     "name": "Lunch Run",
     "type": "Run",
     "sport_type": "Run",
