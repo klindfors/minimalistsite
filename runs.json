@@ -268,17 +268,5 @@
     "average_heartrate": 129.9,
     "location_city": "Stockholm",
     "weather": null
-  },
-  {
-    "name": "Afternoon Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-08-29T14:22:36Z",
-    "distance": 7172.5,
-    "moving_time": 1969,
-    "elapsed_time": 2201,
-    "average_heartrate": 125.1,
-    "location_city": "Stockholm",
-    "weather": null
   }
 ]
