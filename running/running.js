@@ -41,8 +41,19 @@ function addPostit(container, date, weatherIcons, text) {
   const month = date.toLocaleString('en-GB', { month: 'long' });
   postit.innerHTML = `<h1>${month} ${weatherIcons}</h1>${text}`;
   container.appendChild(postit);
+  fit(postit);
+  document.fonts.ready.then(() => fit(postit));
   initDrag(postit, container);
   return postit;
+}
+
+function fit(postit) {
+  postit.style.fontSize = '';
+  let size = parseFloat(getComputedStyle(postit).fontSize);
+  while (postit.scrollHeight > postit.clientHeight && size > 6) {
+    size -= 0.5;
+    postit.style.fontSize = size + 'px';
+  }
 }
 
 function list(items) {
