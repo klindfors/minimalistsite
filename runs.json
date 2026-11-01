@@ -3,6 +3,24 @@
     "name": "Morning Run",
     "type": "Run",
     "sport_type": "Run",
+    "start_date_local": "2026-11-01T10:11:20Z",
+    "distance": 10022.5,
+    "moving_time": 5036,
+    "elapsed_time": 5076,
+    "average_heartrate": 145.3,
+    "location_city": "Stockholm",
+    "weather": {
+      "temp": 8,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d",
+      "wind": 4
+    }
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
     "start_date_local": "2026-10-27T08:26:34Z",
     "distance": 3163.3,
     "moving_time": 1351,
@@ -242,30 +260,6 @@
     "moving_time": 5200,
     "elapsed_time": 5222,
     "average_heartrate": 139.7,
-    "location_city": "Stockholm",
-    "weather": null
-  },
-  {
-    "name": "Night Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-08-30T01:18:07Z",
-    "distance": 9418.5,
-    "moving_time": 2257,
-    "elapsed_time": 2274,
-    "average_heartrate": 119.5,
-    "location_city": "Stockholm",
-    "weather": null
-  },
-  {
-    "name": "Night Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-08-29T22:02:05Z",
-    "distance": 21395.2,
-    "moving_time": 5138,
-    "elapsed_time": 5878,
-    "average_heartrate": 129.9,
     "location_city": "Stockholm",
     "weather": null
   }
