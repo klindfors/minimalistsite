@@ -27,7 +27,13 @@
     "elapsed_time": 1364,
     "average_heartrate": 148.5,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 9,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 5
+    }
   },
   {
     "name": "Lunch Run",
@@ -105,7 +111,13 @@
     "elapsed_time": 3373,
     "average_heartrate": 147.3,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 8,
+      "main": "Rain",
+      "description": "rain",
+      "icon": "10d",
+      "wind": 6
+    }
   },
   {
     "name": "Afternoon Ride",
@@ -117,7 +129,13 @@
     "elapsed_time": 2189,
     "average_heartrate": 124.4,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 18,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d",
+      "wind": 5
+    }
   },
   {
     "name": "Morning Run",
@@ -129,7 +147,13 @@
     "elapsed_time": 6127,
     "average_heartrate": 135.2,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 11,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 3
+    }
   },
   {
     "name": "Afternoon Run",
@@ -141,7 +165,13 @@
     "elapsed_time": 13581,
     "average_heartrate": 153.8,
     "location_city": "Lidingö kommun",
-    "weather": null
+    "weather": {
+      "temp": 15,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 4
+    }
   },
   {
     "name": "Afternoon Ride",
@@ -153,7 +183,13 @@
     "elapsed_time": 1008,
     "average_heartrate": 147.3,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 18,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 6
+    }
   },
   {
     "name": "Lunch Run",
@@ -165,7 +201,13 @@
     "elapsed_time": 1547,
     "average_heartrate": 146.8,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 17,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d",
+      "wind": 5
+    }
   },
   {
     "name": "Morning Run",
@@ -177,7 +219,13 @@
     "elapsed_time": 3767,
     "average_heartrate": 147.3,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 16,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 4
+    }
   },
   {
     "name": "Morning Run",
@@ -189,7 +237,13 @@
     "elapsed_time": 4182,
     "average_heartrate": 139.8,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 16,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d",
+      "wind": 4
+    }
   },
   {
     "name": "Lunch Run",
@@ -201,7 +255,13 @@
     "elapsed_time": 3546,
     "average_heartrate": 144.9,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 18,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d",
+      "wind": 4
+    }
   },
   {
     "name": "Morning Run",
@@ -213,7 +273,13 @@
     "elapsed_time": 1866,
     "average_heartrate": 140.4,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 11,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d",
+      "wind": 2
+    }
   },
   {
     "name": "Afternoon Ride",
@@ -225,7 +291,13 @@
     "elapsed_time": 1406,
     "average_heartrate": 152,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 21,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d",
+      "wind": 4
+    }
   },
   {
     "name": "Morning Run",
@@ -237,7 +309,13 @@
     "elapsed_time": 2626,
     "average_heartrate": 151.6,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 17,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 3
+    }
   },
   {
     "name": "Afternoon Ride",
@@ -249,7 +327,13 @@
     "elapsed_time": 1045,
     "average_heartrate": 141.2,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 20,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d",
+      "wind": 5
+    }
   },
   {
     "name": "Morning Run",
@@ -261,6 +345,12 @@
     "elapsed_time": 5222,
     "average_heartrate": 139.7,
     "location_city": "Stockholm",
-    "weather": null
+    "weather": {
+      "temp": 19,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d",
+      "wind": 3
+    }
   }
 ]
