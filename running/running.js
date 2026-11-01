@@ -12,16 +12,23 @@ async function loadRuns() {
   const shown = runs.slice(0, 15);
   container.innerHTML = shown.map(formatActivity).join('');
   const now = new Date();
-  addPostit(container, now, monthWeatherIcons(runs, monthKey(now)), recap(runs, monthKey(now))
+  const first = addPostit(container, now, monthWeatherIcons(runs, monthKey(now)), recap(runs, monthKey(now))
     || '<p>No runs yet this month. The first one is the best one!</p>');
-  const last = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-  const lastText = recap(runs, monthKey(last));
-  const row = shown.findIndex((run) => run.type === 'Run' && run.start_date_local?.startsWith(monthKey(last)));
-  if (lastText && row !== -1) {
-      const postit = addPostit(container, last, monthWeatherIcons(runs, monthKey(last)), lastText);
-    postit.style.top = container.querySelectorAll('.run')[row].offsetTop + 'px';
-    postit.style.transform = 'rotate(-4deg)';
-  }
+  let next = first.offsetTop + first.offsetHeight + 20;
+  const rows = container.querySelectorAll('.run');
+  const keys = [...new Set(shown.filter((run) => run.type === 'Run').map((run) => run.start_date_local?.slice(0, 7)))]
+    .filter((key) => key && key !== monthKey(now));
+  keys.forEach((key, i) => {
+    const text = recap(runs, key);
+    const row = shown.findIndex((run) => run.type === 'Run' && run.start_date_local?.startsWith(key));
+    if (!text || row === -1) return;
+    const [year, month] = key.split('-').map(Number);
+    const postit = addPostit(container, new Date(year, month - 1, 1), monthWeatherIcons(runs, key), text);
+    const top = Math.max(rows[row].offsetTop, next);
+    postit.style.top = top + 'px';
+    next = top + postit.offsetHeight + 20;
+    postit.style.transform = `rotate(${i % 2 ? 3 : -4}deg)`;
+  });
 }
 
 function monthKey(date) {
