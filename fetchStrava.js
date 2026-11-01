@@ -97,6 +97,47 @@ async function getWeather(lat, lon) {
   }
 }
 
+const codes = [
+  [[0], "Clear", "clear sky", "01"],
+  [[1], "Clouds", "few clouds", "02"],
+  [[2], "Clouds", "scattered clouds", "03"],
+  [[3], "Clouds", "overcast clouds", "04"],
+  [[45, 48], "Fog", "fog", "50"],
+  [[51, 53, 55, 56, 57], "Drizzle", "drizzle", "09"],
+  [[61, 63, 65], "Rain", "rain", "10"],
+  [[66, 67], "Rain", "freezing rain", "13"],
+  [[71, 73, 75, 77, 85, 86], "Snow", "snow", "13"],
+  [[80, 81, 82], "Rain", "shower rain", "09"],
+  [[95, 96, 99], "Thunderstorm", "thunderstorm", "11"],
+];
+
+async function getPastWeather(lat, lon, local) {
+  const day = local.slice(0, 10);
+  try {
+    const res = await fetch(
+      `https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&start_date=${day}&end_date=${day}&hourly=temperature_2m,weather_code,wind_speed_10m,is_day&wind_speed_unit=ms&timezone=auto`
+    );
+    if (!res.ok) {
+      console.error("Open-Meteo weather error:", res.status);
+      return null;
+    }
+    const { hourly } = await res.json();
+    const i = hourly?.time?.indexOf(`${local.slice(0, 13)}:00`) ?? -1;
+    if (i === -1 || hourly.weather_code[i] == null) return null;
+    const code = codes.find(([c]) => c.includes(hourly.weather_code[i]));
+    return {
+      temp: Math.round(hourly.temperature_2m[i]),
+      main: code?.[1] || null,
+      description: code?.[2] || null,
+      icon: code ? code[3] + (hourly.is_day[i] ? "d" : "n") : null,
+      wind: Math.round(hourly.wind_speed_10m[i] ?? 0),
+    };
+  } catch (err) {
+    console.error("Failed to fetch past weather:", err);
+    return null;
+  }
+}
+
 async function updateWeather(runs, existing) {
   for (const post of runs) {
     const old = findOld(existing, post);
@@ -106,12 +147,12 @@ async function updateWeather(runs, existing) {
     }
     const end = Date.parse(post.start_date) + (post.elapsed_time || 0) * 1000;
     const recent = Date.now() - end <= maxAge;
-    if (!recent || !Array.isArray(post.start_latlng) || post.start_latlng.length < 2) {
+    if (!Array.isArray(post.start_latlng) || post.start_latlng.length < 2) {
       post.weather = null;
       continue;
     }
     const [lat, lon] = post.start_latlng;
-    post.weather = await getWeather(lat, lon);
+    post.weather = recent ? await getWeather(lat, lon) : await getPastWeather(lat, lon, post.start_date_local);
     console.log(`Weather for run ${post.id}: ${post.weather ? "ok" : "none"}`);
   }
 }
