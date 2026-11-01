@@ -134,8 +134,10 @@ h1 {
 
         
    .postit {
-        width: clamp(100px, 5vw, 110px);
-        min-height: clamp(35px, 5vw, 55px);
+        width: clamp(96px, 12vw, 170px);
+        height: clamp(96px, 12vw, 170px);
+        box-sizing: border-box;
+        overflow: hidden;
         background: linear-gradient(145deg, #fffab6 0%, #fbf3b0 100%);
         padding: 8px;
         box-shadow: 3px 8px 10px -4px rgba(0,0,0,0.3);
@@ -149,9 +151,9 @@ h1 {
         touch-action: none;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
         z-index: 10;
-        font-size: 0.7em;
+        font-size: clamp(8.2px, 1.02vw, 14.5px);
     }
     
     .postit h1 {
@@ -161,6 +163,11 @@ h1 {
         align-items: center;
         flex-wrap: wrap;
         gap: 2px;
+    }
+
+    .postit h1 img {
+        width: 1.1em;
+        height: 1.1em;
     }
     
     .postit p {
@@ -180,8 +187,6 @@ h1 {
         .postit {
             top: 10px;
             right: 10px;
-            width: 90px;
-            font-size: 0.65em;
         }
     }
         
