@@ -316,23 +316,5 @@
       "icon": "04d",
       "wind": 3
     }
-  },
-  {
-    "name": "Afternoon Ride",
-    "type": "Ride",
-    "sport_type": "Ride",
-    "start_date_local": "2026-08-30T13:53:21Z",
-    "distance": 3537.1,
-    "moving_time": 970,
-    "elapsed_time": 1045,
-    "average_heartrate": 141.2,
-    "location_city": "Stockholm",
-    "weather": {
-      "temp": 20,
-      "main": "Clouds",
-      "description": "overcast clouds",
-      "icon": "04d",
-      "wind": 5
-    }
   }
 ]
