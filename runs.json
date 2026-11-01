@@ -334,23 +334,5 @@
       "icon": "04d",
       "wind": 5
     }
-  },
-  {
-    "name": "Morning Run",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-08-30T10:09:19Z",
-    "distance": 10622.7,
-    "moving_time": 5200,
-    "elapsed_time": 5222,
-    "average_heartrate": 139.7,
-    "location_city": "Stockholm",
-    "weather": {
-      "temp": 19,
-      "main": "Clouds",
-      "description": "few clouds",
-      "icon": "02d",
-      "wind": 3
-    }
   }
 ]
