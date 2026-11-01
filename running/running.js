@@ -187,4 +187,6 @@ function initDrag(postit, container) {
   postit.addEventListener('pointercancel', stop);
 }
 
+window.addEventListener('resize', () => document.querySelectorAll('.postit').forEach(fit));
+
 loadRuns();
