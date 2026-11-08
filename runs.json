@@ -3,6 +3,24 @@
     "name": "Morning Run",
     "type": "Run",
     "sport_type": "Run",
+    "start_date_local": "2026-11-08T09:18:36Z",
+    "distance": 1259,
+    "moving_time": 549,
+    "elapsed_time": 608,
+    "average_heartrate": 143,
+    "location_city": "Stockholm",
+    "weather": {
+      "temp": 2,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d",
+      "wind": 3
+    }
+  },
+  {
+    "name": "Morning Run",
+    "type": "Run",
+    "sport_type": "Run",
     "start_date_local": "2026-11-02T10:50:07Z",
     "distance": 6494.2,
     "moving_time": 2986,
@@ -315,24 +333,6 @@
       "description": "scattered clouds",
       "icon": "03d",
       "wind": 4
-    }
-  },
-  {
-    "name": "Morning Run",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-09-02T09:32:22Z",
-    "distance": 3512.1,
-    "moving_time": 1517,
-    "elapsed_time": 2626,
-    "average_heartrate": 151.6,
-    "location_city": "Stockholm",
-    "weather": {
-      "temp": 17,
-      "main": "Clouds",
-      "description": "overcast clouds",
-      "icon": "04d",
-      "wind": 3
     }
   }
 ]
