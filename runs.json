@@ -1,5 +1,23 @@
 [
   {
+    "name": "Afternoon Ride",
+    "type": "Ride",
+    "sport_type": "Ride",
+    "start_date_local": "2026-11-22T16:30:40Z",
+    "distance": 14557.3,
+    "moving_time": 4304,
+    "elapsed_time": 4784,
+    "average_heartrate": 136,
+    "location_city": "Nacka kommun",
+    "weather": {
+      "temp": 1,
+      "main": "Drizzle",
+      "description": "drizzle",
+      "icon": "09n",
+      "wind": 10
+    }
+  },
+  {
     "name": "Morning Ride",
     "type": "Ride",
     "sport_type": "Ride",
@@ -296,24 +314,6 @@
       "main": "Clear",
       "description": "clear sky",
       "icon": "01d",
-      "wind": 4
-    }
-  },
-  {
-    "name": "Lunch Run",
-    "type": "Run",
-    "sport_type": "Run",
-    "start_date_local": "2026-09-05T12:50:21Z",
-    "distance": 4913,
-    "moving_time": 2095,
-    "elapsed_time": 3546,
-    "average_heartrate": 144.9,
-    "location_city": "Stockholm",
-    "weather": {
-      "temp": 18,
-      "main": "Clouds",
-      "description": "scattered clouds",
-      "icon": "03d",
       "wind": 4
     }
   }
